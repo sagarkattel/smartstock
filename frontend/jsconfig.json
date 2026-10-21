@@ -1,6 +1,11 @@
+
 {
+  // Configuration options for the compiler.
   "compilerOptions": {
+    // Define custom shortcuts for importing files.
     "paths": {
+      // Allows using "@/" instead of relative paths like "../../".
+      // "./*" refers to files and folders in the project root.
       "@/*": ["./*"]
     }
   }
