@@ -41,3 +41,19 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .next-test
+
+# python
+.venv/
+.venv-old/
+__pycache__/
+.pytest_cache/
+
+# claude
+.claude/
+
+# backend runtime data (config/ stays tracked)
+backend/data/dataset/*.xlsx
+backend/data/uploads/
+backend/data/jobs/
+backend/data/state/
+backend/data/dataset_backups/
