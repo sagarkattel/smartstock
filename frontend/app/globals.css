@@ -1,0 +1,208 @@
+@import "tailwindcss";
+
+/*
+ * SmartStock theme: dark navy, with colour tokens as CSS variables so the team's design can be
+ * adjusted in one place (spec §4).
+ */
+:root {
+  color-scheme: dark;
+
+  --background: #050a1a;
+  --surface: #0b1329;
+  --surface-2: #111b38;
+  --foreground: #eaf0ff;
+  --muted: #8e9bbd;
+  --border: #1c2a4d;
+  --primary: #2f6bff;
+  --primary-hover: #4a80ff;
+  --primary-foreground: #ffffff;
+  --danger: #ff7a89;
+  --danger-surface: #2a1220;
+  --focus-ring: #6a97ff;
+  --positive: #34d399;
+  --negative: #f87171;
+  --glow: rgba(47, 107, 255, 0.16);
+  --scroll: #243358;
+
+  /* Logo mark */
+  --stat-violet-from: #6a3fd0;
+  --stat-violet-to: #2f6bff;
+
+  /* Charts */
+  --chart-1: #6c8cff;
+  --chart-2: #3fa9ff;
+  --chart-3: #2ee6a6;
+  --chart-4: #a577ff;
+  --chart-5: #ffb23e;
+  --chart-band: #3fa9ff;
+  --chart-line: #8fb0ff;
+  --chart-history: #8e9bbd;
+
+  /* Priority badges */
+  --badge-high-bg: #2a2060;
+  --badge-high-fg: #c9bcff;
+  --badge-medium-bg: #12305f;
+  --badge-medium-fg: #9cc6ff;
+  --badge-low-bg: #1e2740;
+  --badge-low-fg: #aab5d1;
+
+  /* Status chips */
+  --status-ok-bg: #0f3327;
+  --status-ok-fg: #5be3b0;
+  --status-warn-bg: #3a2c0c;
+  --status-warn-fg: #ffc861;
+  --status-crit-bg: #3a1420;
+  --status-crit-fg: #ff8c9a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-danger: var(--danger);
+  --color-danger-surface: var(--danger-surface);
+  --color-focus-ring: var(--focus-ring);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  background:
+    radial-gradient(900px 420px at 85% -80px, var(--glow), transparent 70%),
+    var(--background);
+  background-attachment: fixed;
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Slim scrollbars that suit the dark theme */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scroll) transparent;
+}
+
+/* Logo mark */
+.stat-violet {
+  background-image: linear-gradient(135deg, var(--stat-violet-from), var(--stat-violet-to));
+}
+
+/* KPI cards: a tinted glow in the card's own colour */
+.kpi {
+  border: 1px solid var(--kpi-border);
+  background:
+    radial-gradient(120% 150% at 0% 0%, var(--kpi-glow), transparent 58%),
+    var(--surface);
+}
+.kpi-green { --kpi-color: #2ee6a6; --kpi-glow: rgba(24, 160, 120, 0.26); --kpi-border: rgba(46, 230, 166, 0.26); --kpi-tile: rgba(46, 230, 166, 0.16); }
+.kpi-blue { --kpi-color: #4d9bff; --kpi-glow: rgba(47, 107, 255, 0.28); --kpi-border: rgba(77, 155, 255, 0.28); --kpi-tile: rgba(77, 155, 255, 0.18); }
+.kpi-purple { --kpi-color: #a577ff; --kpi-glow: rgba(118, 72, 230, 0.3); --kpi-border: rgba(165, 119, 255, 0.28); --kpi-tile: rgba(165, 119, 255, 0.18); }
+.kpi-amber { --kpi-color: #ffb23e; --kpi-glow: rgba(200, 130, 20, 0.24); --kpi-border: rgba(255, 178, 62, 0.26); --kpi-tile: rgba(255, 178, 62, 0.16); }
+
+/* Priority badges (text is always shown, never colour alone) */
+.badge-high { background: var(--badge-high-bg); color: var(--badge-high-fg); }
+.badge-medium { background: var(--badge-medium-bg); color: var(--badge-medium-fg); }
+.badge-low { background: var(--badge-low-bg); color: var(--badge-low-fg); }
+
+/* Status chips */
+.status-ok { background: var(--status-ok-bg); color: var(--status-ok-fg); }
+.status-warn { background: var(--status-warn-bg); color: var(--status-warn-fg); }
+.status-crit { background: var(--status-crit-bg); color: var(--status-crit-fg); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+
+/* ---------------------------------------------------------------------------------------------
+ * Themes. "Dark" is the :root default above; the others override the same variables. The theme is
+ * chosen in Settings > Appearance and set on <html data-theme="...">.
+ * ------------------------------------------------------------------------------------------- */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --background: #eef2fa;
+  --surface: #ffffff;
+  --surface-2: #f1f5fd;
+  --foreground: #0e1a38;
+  --muted: #5a6788;
+  --border: #d7e0f1;
+  --primary: #2a5fe6;
+  --primary-hover: #1f4fcc;
+  --primary-foreground: #ffffff;
+  --danger: #c62839;
+  --danger-surface: #fdecee;
+  --focus-ring: #2a5fe6;
+  --positive: #0f9d6a;
+  --negative: #d6364b;
+  --glow: rgba(47, 107, 255, 0.1);
+  --scroll: #c3cde4;
+
+  --chart-1: #4f6bff;
+  --chart-2: #1f8bff;
+  --chart-3: #0ea371;
+  --chart-4: #8b5cf6;
+  --chart-5: #e08a00;
+  --chart-band: #1f8bff;
+  --chart-line: #2a5fe6;
+  --chart-history: #6b7794;
+
+  --badge-high-bg: #ece8ff;
+  --badge-high-fg: #4a2fb0;
+  --badge-medium-bg: #dfeaff;
+  --badge-medium-fg: #1d4ed8;
+  --badge-low-bg: #eceff5;
+  --badge-low-fg: #4b5568;
+
+  --status-ok-bg: #dcfce7;
+  --status-ok-fg: #166534;
+  --status-warn-bg: #fef3c7;
+  --status-warn-fg: #92400e;
+  --status-crit-bg: #fee2e2;
+  --status-crit-fg: #991b1b;
+}
+:root[data-theme="light"] .kpi-green { --kpi-color: #0e9f6e; --kpi-glow: rgba(14, 159, 110, 0.14); --kpi-border: rgba(14, 159, 110, 0.32); --kpi-tile: rgba(14, 159, 110, 0.12); }
+:root[data-theme="light"] .kpi-blue { --kpi-color: #2563eb; --kpi-glow: rgba(37, 99, 235, 0.14); --kpi-border: rgba(37, 99, 235, 0.3); --kpi-tile: rgba(37, 99, 235, 0.12); }
+:root[data-theme="light"] .kpi-purple { --kpi-color: #7c3aed; --kpi-glow: rgba(124, 58, 237, 0.14); --kpi-border: rgba(124, 58, 237, 0.3); --kpi-tile: rgba(124, 58, 237, 0.12); }
+:root[data-theme="light"] .kpi-amber { --kpi-color: #d97706; --kpi-glow: rgba(217, 119, 6, 0.14); --kpi-border: rgba(217, 119, 6, 0.32); --kpi-tile: rgba(217, 119, 6, 0.12); }
+
+:root[data-theme="midnight"] {
+  --background: #000000;
+  --surface: #0a0a0f;
+  --surface-2: #14141c;
+  --foreground: #f2f4fa;
+  --muted: #8d92a3;
+  --border: #22232e;
+  --primary: #7c5cff;
+  --primary-hover: #957aff;
+  --focus-ring: #a28bff;
+  --glow: rgba(124, 92, 255, 0.14);
+  --scroll: #2b2c3a;
+  --chart-1: #8f7bff;
+  --chart-2: #4fa3ff;
+  --stat-violet-to: #7c5cff;
+}
+
+:root[data-theme="ocean"] {
+  --background: #03141a;
+  --surface: #082029;
+  --surface-2: #0d2d38;
+  --foreground: #e6fbff;
+  --muted: #86a9b3;
+  --border: #14414f;
+  --primary: #12b5a6;
+  --primary-hover: #2cd0c0;
+  --primary-foreground: #03141a;
+  --focus-ring: #4fe0d2;
+  --glow: rgba(18, 181, 166, 0.18);
+  --scroll: #1b4d5c;
+  --chart-1: #3cc9bb;
+  --chart-2: #4aa9ff;
+  --chart-3: #6ee7b7;
+  --chart-4: #8fa8ff;
+  --chart-line: #7fe3d8;
+  --stat-violet-from: #0c8f8f;
+  --stat-violet-to: #12b5a6;
+}
