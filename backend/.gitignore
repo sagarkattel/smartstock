@@ -1,0 +1,22 @@
+# secrets
+.env
+
+# client data - never commit (contains real sales; the raw files also hold access codes in 'Place')
+data/dataset/*.xlsx
+data/dataset_backups/
+data/uploads/
+data/jobs/
+data/state/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# OS
+.DS_Store
+
+# NOTE: models/ contains forecasts and location names derived from client data.
+# Keep this repository PRIVATE, or also add "models/versions/" here.
