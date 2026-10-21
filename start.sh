@@ -1,83 +1,105 @@
 #!/usr/bin/env bash
-# Starts the SmartStock backend (http://localhost:8000) and frontend (http://localhost:3000).
-# Ctrl+C stops both.
+# Starts SmartStock: the backend (FastAPI) and the frontend (Next.js) with one command.
+#
+#   ./start.sh            start both, Ctrl+C stops both
+#
+# Optional settings (put in front of the command):
+#   BACKEND_PORT=8000  FRONTEND_PORT=3000  OPEN_BROWSER=0  ./start.sh
 
+set -u
 ROOT="$(cd "$(dirname "$0")" && pwd)"
-BACKEND="$ROOT/SmartStock_Backend"
-FRONTEND="$ROOT/Smart Stock Frontend"
+BACKEND_DIR="$ROOT/backend"
+FRONTEND_DIR="$ROOT/frontend"
+BACKEND_PORT="${BACKEND_PORT:-8000}"
+FRONTEND_PORT="${FRONTEND_PORT:-3000}"
+OPEN_BROWSER="${OPEN_BROWSER:-1}"
 
+bold() { printf '\033[1m%s\033[0m\n' "$*"; }
+fail() { printf '\033[31mError:\033[0m %s\n' "$*" >&2; exit 1; }
+
+# ---------- checks ----------
+[ -d "$BACKEND_DIR" ] || fail "Backend folder not found: $BACKEND_DIR"
+[ -d "$FRONTEND_DIR" ] || fail "Frontend folder not found: $FRONTEND_DIR"
+command -v node >/dev/null 2>&1 || fail "Node.js is not installed (https://nodejs.org)."
+command -v npm >/dev/null 2>&1 || fail "npm is not installed."
+
+for port in "$BACKEND_PORT" "$FRONTEND_PORT"; do
+  if lsof -ti "tcp:$port" >/dev/null 2>&1; then
+    fail "Port $port is already in use. Close the other program, or pick another port, e.g. BACKEND_PORT=8010 FRONTEND_PORT=3010 ./start.sh"
+  fi
+done
+
+# ---------- backend: Python environment ----------
+# A copied .venv keeps the old folder path inside it, so use "python -m uvicorn" (works anywhere)
+# and rebuild the environment only if it cannot import the packages.
+PY="$BACKEND_DIR/.venv/bin/python"
+if [ ! -x "$PY" ] || ! "$PY" -c "import uvicorn, fastapi, sklearn, pandas" >/dev/null 2>&1; then
+  bold "Setting up the backend Python environment (first run only, a few minutes)..."
+  PYBIN="$(command -v python3.13 || command -v python3.12 || command -v python3.11 || command -v python3)" || fail "Python 3.11 or newer is not installed."
+  rm -rf "$BACKEND_DIR/.venv"
+  "$PYBIN" -m venv "$BACKEND_DIR/.venv" || fail "Could not create the Python environment."
+  "$PY" -m pip install -q --upgrade pip
+  "$PY" -m pip install -q -r "$BACKEND_DIR/requirements.txt" || fail "Installing the backend packages failed."
+fi
+
+# ---------- frontend: packages and settings ----------
+if [ ! -d "$FRONTEND_DIR/node_modules" ]; then
+  bold "Installing the frontend packages (first run only)..."
+  (cd "$FRONTEND_DIR" && npm install) || fail "npm install failed."
+fi
+if [ ! -f "$FRONTEND_DIR/.env.local" ]; then
+  [ -f "$FRONTEND_DIR/.env.example" ] || fail "Missing $FRONTEND_DIR/.env.local"
+  cp "$FRONTEND_DIR/.env.example" "$FRONTEND_DIR/.env.local"
+  echo "Created .env.local from .env.example"
+fi
+
+# ---------- run both, stop both on Ctrl+C ----------
+PIDS=""
 cleanup() {
   trap - INT TERM EXIT
   echo
-  echo "Stopping SmartStock..."
-  kill 0 2>/dev/null
+  bold "Stopping SmartStock..."
+  for pid in $PIDS; do kill "$pid" 2>/dev/null; done
+  # also stop anything those two started (uvicorn reloader, Next.js server)
+  for port in "$BACKEND_PORT" "$FRONTEND_PORT"; do
+    lsof -ti "tcp:$port" 2>/dev/null | xargs kill 2>/dev/null
+  done
+  wait 2>/dev/null
   exit 0
 }
 trap cleanup INT TERM EXIT
 
-prefix() { while IFS= read -r line; do echo "$1 $line"; done; }
-port_busy() { lsof -iTCP:"$1" -sTCP:LISTEN >/dev/null 2>&1; }
-for p in 8000 3000; do
-  if port_busy "$p"; then
-    echo "Port $p is already in use. Close whatever is using it (lsof -i :$p) and try again."
-    trap - EXIT; exit 1
-  fi
-done
+prefix() { awk -v tag="$1" -v col="$2" '{ printf "\033[%sm[%s]\033[0m %s\n", col, tag, $0; fflush() }'; }
 
-# backend setup (first run only)
-cd "$BACKEND" || exit 1
-# a .venv copied from another computer doesn't work here, so check it actually runs
-if ! .venv/bin/python -c "import uvicorn, fastapi, sklearn, pandas" >/dev/null 2>&1; then
-  if [ -d .venv ]; then
-    echo "The existing .venv doesn't work on this Mac (it was made on another computer)."
-    echo "Moving it to .venv-old and creating a new one..."
-    rm -rf .venv-old; mv .venv .venv-old
-  fi
-  echo "Setting up the Python environment (a few minutes, first run only)..."
-  python3.11.11.11.11.11.11.11.11.11.11.11 -m venv .venv || exit 1
-  .venv/bin/python -m pip install --upgrade pip >/dev/null
-  .venv/bin/python -m pip install -r requirements.txt || exit 1
-fi
-if [ ! -f .env ]; then
-  echo "No .env in SmartStock_Backend. Copy .env.example to .env and set the password and secret key."
-  trap - EXIT; exit 1
-fi
+bold "Starting the backend on http://localhost:$BACKEND_PORT ..."
+(
+  cd "$BACKEND_DIR" || exit 1
+  exec "$PY" -m uvicorn app.main:app --host 0.0.0.0 --port "$BACKEND_PORT" --reload --reload-dir app
+) 2>&1 | prefix backend 36 &
+PIDS="$PIDS $!"
 
-# frontend setup (first run only)
-cd "$FRONTEND" || exit 1
-[ -f .env.local ] || cp .env.example .env.local
-if [ ! -d node_modules ]; then
-  echo "Installing frontend packages (first run)..."
-  npm install || exit 1
-fi
+# the frontend needs to know where the backend is when the port is not the default
+export SMARTSTOCK_API_URL="${SMARTSTOCK_API_URL:-http://localhost:$BACKEND_PORT/api/v1}"
 
-echo "Starting backend..."
-( cd "$BACKEND" && .venv/bin/python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 \
-    --reload --reload-dir app 2>&1 | prefix "[backend] " ) &
+bold "Starting the frontend on http://localhost:$FRONTEND_PORT ..."
+(
+  cd "$FRONTEND_DIR" || exit 1
+  exec npm run dev -- -p "$FRONTEND_PORT"
+) 2>&1 | prefix frontend 35 &
+PIDS="$PIDS $!"
 
-printf "Waiting for the models to load"
-for i in $(seq 1 120); do
-  if curl -s http://localhost:8000/health | grep -q '"status": *"ok"'; then
-    echo " ready."
-    break
-  fi
-  printf "."
-  sleep 1
-  if [ "$i" -eq 120 ]; then
-    echo
-    echo "Backend didn't report ready after 2 minutes; check the [backend] lines above."
-  fi
-done
-
-echo "Starting frontend..."
-( cd "$FRONTEND" && npm run dev 2>&1 | prefix "[frontend]" ) &
-
-# open the browser once the frontend answers
-( for i in $(seq 1 60); do
-    curl -s -o /dev/null http://localhost:3000 && { open http://localhost:3000; break; }
+# wait until both answer, then say so (and open the browser)
+(
+  for _ in $(seq 1 120); do
+    curl -fs "http://localhost:$BACKEND_PORT/health" >/dev/null 2>&1 && break
     sleep 1
-  done ) &
+  done
+  for _ in $(seq 1 120); do
+    curl -fs -o /dev/null "http://localhost:$FRONTEND_PORT/login" 2>/dev/null && break
+    sleep 1
+  done
+  printf '\n\033[1;32mSmartStock is ready:\033[0m http://localhost:%s   (backend API docs: http://localhost:%s/docs)\n   Press Ctrl+C to stop both.\n\n' "$FRONTEND_PORT" "$BACKEND_PORT"
+  [ "$OPEN_BROWSER" = "1" ] && command -v open >/dev/null 2>&1 && open "http://localhost:$FRONTEND_PORT"
+) &
 
-echo "SmartStock is running: http://localhost:3000  (API docs: http://localhost:8000/docs)"
-echo "Press Ctrl+C to stop."
 wait
