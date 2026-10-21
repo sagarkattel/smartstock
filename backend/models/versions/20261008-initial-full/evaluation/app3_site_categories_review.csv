@@ -1,0 +1,130 @@
+Location,Categories,Matched_keywords,Source,Staff_area,Machines,Named_sales,Used_in_training
+The Regiment,Other / unclassified,,none,no,2,32433,True
+Primo moraitis,Other / unclassified,,none,no,2,14234,True
+RINSE AND REPEAT,Other / unclassified,,none,no,3,6475,True
+JAMES VILLAGE NORTH SYDNEY,Other / unclassified,,none,no,2,4747,True
+yerrabingin house,Other / unclassified,,none,no,2,2435,True
+Quay Centre,Other / unclassified,,none,no,1,2195,True
+Aecim,Other / unclassified,,none,no,1,0,False
+Albright & Wilson,Other / unclassified,,none,no,1,0,False
+Cremorne Point Manor,Other / unclassified,,none,no,1,0,False
+Donald coburn centre,Other / unclassified,,none,no,1,0,False
+Essence Communities,Other / unclassified,,none,no,1,0,False
+MACQUARIE HAMPSON SUGERMAN,Other / unclassified,,none,no,1,0,False
+Napa,Other / unclassified,,none,no,1,0,False
+Redstar Penrith,Other / unclassified,,none,no,1,0,False
+Tony mundine aboriginal lodge,Other / unclassified,,none,no,1,0,False
+Woolworths Minchbury,Retail | Staff area,Retail: woolworths,keyword,yes,9,82460,True
+STATE SPORTS CENTRE,Sports & fitness,Sports & fitness: sport*,keyword,no,14,56411,True
+Epping Station,Transport & transit,Transport & transit: station,keyword,no,3,49823,True
+SYDNEY AQUATIC CENTRE LEVEL 1,Sports & fitness,Sports & fitness: aquatic,keyword,no,10,46389,True
+Motor Sport,Sports & fitness | Automotive,Sports & fitness: sport* | Automotive: motor*,keyword,no,6,31434,True
+Study Group,Education | Office & corporate | Staff area,Education: study group | Office & corporate: group,keyword,yes,3,26513,True
+AirRoad,Transport & transit,Transport & transit: airroad,keyword,no,3,26423,True
+SYDNEY INTL ATHLETIC CENTRE,Sports & fitness,Sports & fitness: athletic,keyword,no,14,23965,True
+AIRPORT LINK COMPANY PTY LTD - A to Z,Transport & transit | Office & corporate,Transport & transit: airport | Office & corporate: pty | Office & corporate: ltd | Office & corporate: company,keyword,no,5,20537,True
+AIRPORT LINK - GREEN SQUARE,Transport & transit,Transport & transit: airport,keyword,no,4,18147,True
+SYDNEY OPERATIONS CENTRE,Office & corporate,Office & corporate: operations centre,keyword,no,2,15377,True
+Castle Hill Station,Transport & transit,Transport & transit: station,keyword,no,4,13533,True
+CASTLE HILL TAFE,Education | Staff area,Education: tafe,keyword,yes,4,13350,True
+BLACKTOWN TAFE,Education,Education: tafe,keyword,no,6,12815,True
+Oran Park building site,Construction site,Construction site: building site,keyword,no,2,10106,True
+Carrabay Business,Office & corporate,Office & corporate: business,keyword,no,1,8322,True
+RYDE AQUATIC CENTRE,Sports & fitness,Sports & fitness: aquatic,keyword,no,2,7910,True
+AUSTRALIAN TURF CLUB RANDWICK,Hospitality & clubs | Staff area,Hospitality & clubs: club | Hospitality & clubs: turf,keyword,yes,2,7379,True
+Csiro,Office & corporate | Staff area,Office & corporate: csiro,keyword,yes,1,5349,True
+UNILODGE DARLINGTON,Student accommodation,Student accommodation: unilodge,keyword,no,2,5297,True
+A ONE CAFE,Hospitality & clubs,Hospitality & clubs: cafe,keyword,no,1,4688,True
+Blacktown railcorp,Transport & transit | Staff area,Transport & transit: railcorp,keyword,yes,1,4684,True
+Hyundai Macquarie Park,Automotive,Automotive: hyundai,keyword,no,2,4527,True
+Crash Claims,Automotive | Office & corporate,Automotive: crash | Office & corporate: claims,keyword,no,2,4440,True
+H & M Parramatta,Retail | Staff area,Retail: h & m,keyword,yes,1,4165,True
+ARCHERY CENTRE,Sports & fitness,Sports & fitness: archery,keyword,no,2,3886,True
+ROSEBERY HOTEL,Hospitality & clubs,Hospitality & clubs: hotel,keyword,no,1,3647,True
+RYDE EASTWOOD LEAGUES,Hospitality & clubs,Hospitality & clubs: leagues,keyword,no,2,3566,True
+IMAGETEC SOLUTIONS AUSTRALIA PTY L,Office & corporate,Office & corporate: pty | Office & corporate: solutions | Office & corporate: imagetec,keyword,no,1,3523,True
+MIT COLLEGE,Education,Education: college | Education: mit,keyword,no,2,3474,True
+STADIUM AUST. MANAGEMENT LTD,Sports & fitness | Office & corporate,Sports & fitness: stadium | Office & corporate: ltd,keyword,no,2,3349,True
+Team Global Express,Industrial & logistics,Industrial & logistics: express,keyword,no,1,3288,True
+F45 Training,Sports & fitness,Sports & fitness: f45,keyword,no,1,3116,True
+AIRPORT LINK - BOURKE ST MASCOT,Transport & transit,Transport & transit: airport,keyword,no,2,2984,True
+GLEBE TOYOTA,Automotive,Automotive: toyota,keyword,no,1,2925,True
+Kennards stirage petersham,Car park & storage,Car park & storage: kennards | Car park & storage: stirage,keyword,no,1,2717,True
+GLOBUS VISCOFAN GROUP,Office & corporate,Office & corporate: group,keyword,no,1,2613,True
+SCHLINDER LIFTS/BUILDING D,Industrial & logistics,Industrial & logistics: lifts,keyword,no,1,2613,True
+TOYOTA BANKSMEADOW,Automotive,Automotive: toyota,keyword,no,1,2139,True
+CSC - NORTH RYDE,Office & corporate,Office & corporate: csc,keyword,no,3,2025,True
+GLADESVILLE POLICE SOCIAL CLUB,Hospitality & clubs,Hospitality & clubs: club,keyword,no,1,1996,True
+KENT INSTITUTE,Education,Education: institute,keyword,no,2,1996,True
+Anglicare Brian King Gardens,Healthcare & aged care,Healthcare & aged care: anglicare,keyword,no,1,1505,True
+H&m Macquarie,Retail | Staff area,Retail: h&m,keyword,yes,1,1477,True
+Campbelltown building site,Construction site | Staff area,Construction site: building site,keyword,yes,2,1346,False
+Drummoyne Nursing Home,Healthcare & aged care,Healthcare & aged care: nursing,keyword,no,1,1223,True
+Auburn transit  office,Transport & transit | Staff area,Transport & transit: transit,keyword,yes,1,1061,True
+Kingsford International Institute,Education,Education: institute,keyword,no,1,1040,True
+NICTA,Office & corporate,Office & corporate: nicta,keyword,no,1,990,True
+Blacktown Building Site,Construction site,Construction site: building site,keyword,no,2,880,True
+All Metal Australia,Industrial & logistics,Industrial & logistics: metal,keyword,no,1,870,True
+BUPA Baulkham Hills,Healthcare & aged care,Healthcare & aged care: bupa,keyword,no,3,780,True
+CITIBANK LTD,Office & corporate,Office & corporate: ltd,keyword,no,1,743,True
+Smartech Business Systems,Office & corporate,Office & corporate: systems | Office & corporate: business,keyword,no,2,715,True
+Ventia,Office & corporate,Office & corporate: ventia,keyword,no,1,600,True
+Secure Parking North Sydney,Car park & storage,Car park & storage: parking,keyword,no,1,468,False
+UWS BANKSTOWN,Education,Education: uws,keyword,no,2,243,False
+B.O.M,Office & corporate,Office & corporate: b.o.m,keyword,no,2,239,False
+CANTERBURY RACECOURSE,Hospitality & clubs | Staff area,Hospitality & clubs: racecourse,keyword,yes,1,168,False
+OFFICE WORKS,Retail | Staff area,Retail: office works,keyword,yes,1,164,False
+Secure Parking Pyrmont,Car park & storage,Car park & storage: parking,keyword,no,1,142,False
+CARRINGTON WAREHOUSE,Industrial & logistics,Industrial & logistics: warehouse,keyword,no,1,104,False
+Lonsdale institute education Centres,Education,Education: institute | Education: education,keyword,no,1,88,False
+MYERS - SYDNEY CITY,Retail | Staff area,Retail: myer*,keyword,yes,1,62,False
+RESERVE BANK OF AUST,Office & corporate,Office & corporate: bank,keyword,no,1,56,False
+COZY M HOTEL,Hospitality & clubs,Hospitality & clubs: hotel,keyword,no,1,41,False
+transit office redfern,Transport & transit | Staff area,Transport & transit: transit,keyword,yes,1,30,False
+Ya motors,Automotive,Automotive: motor*,keyword,no,1,25,False
+Toyota waterloo,Automotive,Automotive: toyota,keyword,no,1,21,False
+Secure Parking Leichhardt,Car park & storage,Car park & storage: parking,keyword,no,1,19,False
+Secure Parking Parramatta,Car park & storage,Car park & storage: parking,keyword,no,1,18,False
+SYDNEY SHOWGROUND - EXHIB COMP,Culture & events | Staff area,Culture & events: showground | Culture & events: exhib*,keyword,yes,1,14,False
+Abbott,Office & corporate | Staff area,Office & corporate: abbott,keyword,yes,1,0,False
+ACG EQUIPMENT,Office & corporate,Office & corporate: equipment,keyword,no,1,0,False
+Air Road,Transport & transit,Transport & transit: air road,keyword,no,1,0,False
+ARNOTT - COMPASS GROUP,Office & corporate | Staff area,Office & corporate: group,keyword,yes,1,0,False
+BAULKHAM HILLS TAFE,Education | Staff area,Education: tafe,keyword,yes,1,0,False
+Bupa Aged Care Mosman,Healthcare & aged care,Healthcare & aged care: aged care | Healthcare & aged care: bupa,keyword,no,1,0,False
+CQ UNIVERSITY SYDNEY,Education,Education: universit* | Education: cq,keyword,no,2,0,False
+Displaywise,Office & corporate | Staff area,Office & corporate: displaywise,keyword,yes,1,0,False
+Flower power mascot,Retail,Retail: flower power,keyword,no,1,0,False
+Glebe Toyota 1,Automotive,Automotive: toyota,keyword,no,1,0,False
+H & m Broadway,Retail | Staff area,Retail: h & m,keyword,yes,1,0,False
+H & M Narellan,Retail | Staff area,Retail: h & m,keyword,yes,1,0,False
+H & m pitt st,Retail | Staff area,Retail: h & m,keyword,yes,1,0,False
+Hannover Life Sydney,Office & corporate,Office & corporate: life,keyword,no,1,0,False
+Hino,Automotive,Automotive: hino,keyword,no,1,0,False
+HINO Carrington Road,Automotive,Automotive: hino,keyword,no,1,0,False
+Holiday inn Parramatta,Hospitality & clubs,Hospitality & clubs: inn,keyword,no,1,0,False
+Homebush Building Site,Construction site,Construction site: building site,keyword,no,1,0,False
+Hytec Industries,Industrial & logistics | Staff area,Industrial & logistics: industr*,keyword,yes,1,0,False
+kennards Storage Moorepark,Car park & storage,Car park & storage: kennards | Car park & storage: storage,keyword,no,1,0,False
+Kennards Storage Thornleigh,Car park & storage,Car park & storage: kennards | Car park & storage: storage,keyword,no,1,0,False
+NA GROUP BANKSTOWN,Office & corporate,Office & corporate: group,keyword,no,1,0,False
+nicks' foods,Industrial & logistics,Industrial & logistics: foods,keyword,no,1,0,False
+Position  partners,Office & corporate,Office & corporate: partners | Office & corporate: position,keyword,no,1,0,False
+POWERHOUSE MUSEUM,Culture & events,Culture & events: museum,keyword,no,1,0,False
+Red Star Hotel,Hospitality & clubs | Staff area,Hospitality & clubs: hotel,keyword,yes,1,0,False
+Regis Nursing Home Hurstville,Healthcare & aged care,Healthcare & aged care: nursing,keyword,no,1,0,False
+Rosemore Nursing Home,Healthcare & aged care,Healthcare & aged care: nursing,keyword,no,1,0,False
+Ross School Photography,Education,Education: school,keyword,no,1,0,False
+S. R Smash Solutions,Automotive | Office & corporate,Automotive: smash | Office & corporate: solutions,keyword,no,1,0,False
+Sams Tuturing,Education,Education: tuturing,keyword,no,1,0,False
+Scots English College,Education,Education: college,keyword,no,1,0,False
+Secure Parking 99 Mount Street,Car park & storage,Car park & storage: parking,keyword,no,1,0,False
+Stelno Group,Office & corporate | Staff area,Office & corporate: group,keyword,yes,1,0,False
+Top Education Institute,Education,Education: institute | Education: education,keyword,no,2,0,False
+transdev,Transport & transit,Transport & transit: transdev,keyword,no,1,0,False
+Transdev Pyrmont,Transport & transit,Transport & transit: transdev,keyword,no,1,0,False
+Trinity Catholic College Auburn,Education | Staff area,Education: college,keyword,yes,1,0,False
+Trinity Catholic College Regents Park,Education,Education: college,keyword,no,1,0,False
+Unilodge on Broadway - Student Accommodation,Student accommodation,Student accommodation: unilodge | Student accommodation: student accommodation,keyword,no,4,0,False
+Unilodge Wattle St,Student accommodation,Student accommodation: unilodge,keyword,no,1,0,False
+Valiant Finance,Office & corporate,Office & corporate: finance | Office & corporate: valiant,keyword,no,1,0,False

@@ -1,0 +1,1364 @@
+{
+  "generated": "2026-10-08T14:25:12",
+  "data_window": [
+    "2023-09-04",
+    "2026-08-30"
+  ],
+  "forecast_start": "2026-08-31",
+  "backtest": {
+    "folds": 4,
+    "horizon_weeks": 4,
+    "method": "rolling-origin, recursive multi-step"
+  },
+  "app1": {
+    "series": 156,
+    "unit": "product (fleet-wide)",
+    "selected_method": "HGB Poisson + price",
+    "training_rows": 22640,
+    "params": {
+      "learning_rate": 0.1,
+      "max_iter": 300,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 40,
+      "l2_regularization": 1.0
+    },
+    "MAE": 5.068025975870265,
+    "RMSE": 8.261498865290246,
+    "WAPE": 0.2566609754447953,
+    "MASE": 0.7170085137927736,
+    "Bias": 0.016212535505861877,
+    "best_baseline": "Moving avg (4 wk)",
+    "best_baseline_MAE": 5.341145833333333,
+    "MAE_improvement_vs_best_baseline": 0.05113506838898982,
+    "coverage_P10_P90": 0.7880608974358975,
+    "share_below_P90": 0.8830128205128205,
+    "all_models": {
+      "Ensemble HGB + MA4": {
+        "MAE": 5.0491,
+        "RMSE": 8.1987,
+        "WAPE": 0.2557,
+        "MASE": 0.7133,
+        "Bias": 0.0126
+      },
+      "HGB Poisson + price": {
+        "MAE": 5.068,
+        "RMSE": 8.2615,
+        "WAPE": 0.2567,
+        "MASE": 0.717,
+        "Bias": 0.0162
+      },
+      "HGB Poisson": {
+        "MAE": 5.1829,
+        "RMSE": 8.5169,
+        "WAPE": 0.2625,
+        "MASE": 0.7285,
+        "Bias": 0.0021
+      },
+      "HGB Squared error": {
+        "MAE": 5.3004,
+        "RMSE": 8.4164,
+        "WAPE": 0.2684,
+        "MASE": 0.7526,
+        "Bias": 0.058
+      },
+      "Moving avg (4 wk)": {
+        "MAE": 5.3411,
+        "RMSE": 9.103,
+        "WAPE": 0.2705,
+        "MASE": 0.7459,
+        "Bias": 0.0231
+      },
+      "Naive (last week)": {
+        "MAE": 5.9615,
+        "RMSE": 10.192,
+        "WAPE": 0.3019,
+        "MASE": 0.8434,
+        "Bias": 0.0082
+      },
+      "Seasonal naive (52 wk)": {
+        "MAE": 16.7103,
+        "RMSE": 26.8203,
+        "WAPE": 0.8463,
+        "MASE": 1.9902,
+        "Bias": 0.7026
+      }
+    },
+    "policy": {
+      "P90 (SmartStock v2)": {
+        "Stockout rate (demand > stock)": 0.0877,
+        "Avg units short": 0.3994,
+        "Avg excess units": 9.23,
+        "Total stock / demand": 1.4472
+      },
+      "Forecast +20% (v1)": {
+        "Stockout rate (demand > stock)": 0.2039,
+        "Avg units short": 0.9744,
+        "Avg excess units": 5.8125,
+        "Total stock / demand": 1.245
+      },
+      "Last week's sales (manual habit)": {
+        "Stockout rate (demand > stock)": 0.4327,
+        "Avg units short": 2.8994,
+        "Avg excess units": 3.0621,
+        "Total stock / demand": 1.0082
+      }
+    },
+    "top_features": {
+      "lag_1": 5.9111,
+      "item": 2.7599,
+      "rm_26": 1.3411,
+      "rm_4": 1.3349,
+      "lag_2": 0.4248
+    },
+    "long_horizon_check": [
+      {
+        "origin": "2025-09-01",
+        "method": "HGB recursive (selected)",
+        "series": 155,
+        "WAPE wk 1-4": 0.3264,
+        "WAPE wk 5-26": 0.3459,
+        "Total-demand error wk 5-26": 0.003
+      },
+      {
+        "origin": "2025-09-01",
+        "method": "Moving avg (4 wk)",
+        "series": 155,
+        "WAPE wk 1-4": 0.3317,
+        "WAPE wk 5-26": 0.4792,
+        "Total-demand error wk 5-26": 0.2204
+      },
+      {
+        "origin": "2025-09-01",
+        "method": "Scaled seasonal naive",
+        "series": 155,
+        "WAPE wk 1-4": 0.4029,
+        "WAPE wk 5-26": 0.6904,
+        "Total-demand error wk 5-26": 0.4934
+      },
+      {
+        "origin": "2025-12-01",
+        "method": "HGB recursive (selected)",
+        "series": 155,
+        "WAPE wk 1-4": 0.273,
+        "WAPE wk 5-26": 0.4703,
+        "Total-demand error wk 5-26": 0.0257
+      },
+      {
+        "origin": "2025-12-01",
+        "method": "Moving avg (4 wk)",
+        "series": 155,
+        "WAPE wk 1-4": 0.457,
+        "WAPE wk 5-26": 0.7555,
+        "Total-demand error wk 5-26": 0.6623
+      },
+      {
+        "origin": "2025-12-01",
+        "method": "Scaled seasonal naive",
+        "series": 155,
+        "WAPE wk 1-4": 0.3435,
+        "WAPE wk 5-26": 0.8506,
+        "Total-demand error wk 5-26": 0.6691
+      },
+      {
+        "origin": "2026-03-02",
+        "method": "HGB recursive (selected)",
+        "series": 156,
+        "WAPE wk 1-4": 0.3466,
+        "WAPE wk 5-26": 0.6102,
+        "Total-demand error wk 5-26": 0.5093
+      },
+      {
+        "origin": "2026-03-02",
+        "method": "Moving avg (4 wk)",
+        "series": 156,
+        "WAPE wk 1-4": 0.2301,
+        "WAPE wk 5-26": 0.359,
+        "Total-demand error wk 5-26": 0.1729
+      },
+      {
+        "origin": "2026-03-02",
+        "method": "Scaled seasonal naive",
+        "series": 156,
+        "WAPE wk 1-4": 0.4631,
+        "WAPE wk 5-26": 0.5716,
+        "Total-demand error wk 5-26": 0.3738
+      }
+    ]
+  },
+  "app2a": {
+    "series": 108,
+    "unit": "machine total (all transactions)",
+    "selected_method": "HGB Poisson",
+    "training_rows": 11071,
+    "params": {
+      "learning_rate": 0.05,
+      "max_iter": 300,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 40,
+      "l2_regularization": 1.0
+    },
+    "MAE": 12.887072862115025,
+    "RMSE": 19.092652083293377,
+    "WAPE": 0.2554971399337017,
+    "MASE": 0.8826913337249983,
+    "Bias": 0.011019245963789432,
+    "best_baseline": "Moving avg (4 wk)",
+    "best_baseline_MAE": 15.544044665012407,
+    "MAE_improvement_vs_best_baseline": 0.17093181730736245,
+    "coverage_P10_P90": 0.6910669975186104,
+    "share_below_P90": 0.858560794044665,
+    "all_models": {
+      "HGB Poisson": {
+        "MAE": 12.8871,
+        "RMSE": 19.0927,
+        "WAPE": 0.2555,
+        "MASE": 0.8827,
+        "Bias": 0.011
+      },
+      "HGB Poisson + price": {
+        "MAE": 12.9884,
+        "RMSE": 19.254,
+        "WAPE": 0.2575,
+        "MASE": 0.8837,
+        "Bias": 0.0069
+      },
+      "HGB Squared error": {
+        "MAE": 13.0544,
+        "RMSE": 19.163,
+        "WAPE": 0.2588,
+        "MASE": 0.8989,
+        "Bias": 0.0226
+      },
+      "Ensemble HGB + MA4": {
+        "MAE": 13.7115,
+        "RMSE": 20.8064,
+        "WAPE": 0.2718,
+        "MASE": 0.9152,
+        "Bias": 0.0105
+      },
+      "Moving avg (4 wk)": {
+        "MAE": 15.544,
+        "RMSE": 24.385,
+        "WAPE": 0.3082,
+        "MASE": 1.0106,
+        "Bias": 0.01
+      },
+      "Naive (last week)": {
+        "MAE": 15.6377,
+        "RMSE": 24.3702,
+        "WAPE": 0.31,
+        "MASE": 1.0417,
+        "Bias": 0.0186
+      },
+      "Seasonal naive (52 wk)": {
+        "MAE": 20.6669,
+        "RMSE": 31.8891,
+        "WAPE": 0.4097,
+        "MASE": 1.448,
+        "Bias": 0.011
+      }
+    },
+    "policy": {
+      "P90 (SmartStock v2)": {
+        "Stockout rate (demand > stock)": 0.1247,
+        "Avg units short": 1.2686,
+        "Avg excess units": 19.8772,
+        "Total stock / demand": 1.3689
+      },
+      "Forecast +20% (v1)": {
+        "Stockout rate (demand > stock)": 0.219,
+        "Avg units short": 2.683,
+        "Avg excess units": 13.9206,
+        "Total stock / demand": 1.2228
+      },
+      "Last week's sales (manual habit)": {
+        "Stockout rate (demand > stock)": 0.4646,
+        "Avg units short": 7.3486,
+        "Avg excess units": 8.2891,
+        "Total stock / demand": 1.0186
+      }
+    },
+    "top_features": {
+      "lag_1": 8.5998,
+      "asset": 5.3572,
+      "lag_52": 1.0631,
+      "rm_4": 0.8161,
+      "rm_13": 0.7053
+    },
+    "long_horizon_check": [
+      {
+        "origin": "2025-09-01",
+        "method": "HGB recursive (selected)",
+        "series": 93,
+        "WAPE wk 1-4": 0.259,
+        "WAPE wk 5-26": 0.3591,
+        "Total-demand error wk 5-26": 0.0857
+      },
+      {
+        "origin": "2025-09-01",
+        "method": "Moving avg (4 wk)",
+        "series": 93,
+        "WAPE wk 1-4": 0.2784,
+        "WAPE wk 5-26": 0.4482,
+        "Total-demand error wk 5-26": 0.013
+      },
+      {
+        "origin": "2025-09-01",
+        "method": "Scaled seasonal naive",
+        "series": 93,
+        "WAPE wk 1-4": 0.579,
+        "WAPE wk 5-26": 0.6457,
+        "Total-demand error wk 5-26": 0.3637
+      },
+      {
+        "origin": "2025-12-01",
+        "method": "HGB recursive (selected)",
+        "series": 94,
+        "WAPE wk 1-4": 0.3192,
+        "WAPE wk 5-26": 0.3855,
+        "Total-demand error wk 5-26": 0.0753
+      },
+      {
+        "origin": "2025-12-01",
+        "method": "Moving avg (4 wk)",
+        "series": 94,
+        "WAPE wk 1-4": 0.4984,
+        "WAPE wk 5-26": 0.4463,
+        "Total-demand error wk 5-26": 0.1213
+      },
+      {
+        "origin": "2025-12-01",
+        "method": "Scaled seasonal naive",
+        "series": 94,
+        "WAPE wk 1-4": 0.5966,
+        "WAPE wk 5-26": 0.6381,
+        "Total-demand error wk 5-26": 0.3114
+      },
+      {
+        "origin": "2026-03-02",
+        "method": "HGB recursive (selected)",
+        "series": 96,
+        "WAPE wk 1-4": 0.2491,
+        "WAPE wk 5-26": 0.3322,
+        "Total-demand error wk 5-26": 0.0215
+      },
+      {
+        "origin": "2026-03-02",
+        "method": "Moving avg (4 wk)",
+        "series": 96,
+        "WAPE wk 1-4": 0.3036,
+        "WAPE wk 5-26": 0.4276,
+        "Total-demand error wk 5-26": 0.1483
+      },
+      {
+        "origin": "2026-03-02",
+        "method": "Scaled seasonal naive",
+        "series": 96,
+        "WAPE wk 1-4": 0.2939,
+        "WAPE wk 5-26": 0.3745,
+        "Total-demand error wk 5-26": 0.0149
+      }
+    ]
+  },
+  "app2b": {
+    "series": 1471,
+    "unit": "machine x product",
+    "selected_method": "Combined: direct + top-down",
+    "training_rows": 147613,
+    "params": {
+      "learning_rate": 0.05,
+      "max_iter": 300,
+      "max_leaf_nodes": 63,
+      "min_samples_leaf": 40,
+      "l2_regularization": 1.0
+    },
+    "MAE": 1.303679055105795,
+    "RMSE": 1.9893043461131794,
+    "WAPE": 0.6513637118472683,
+    "MASE": 0.973128610281805,
+    "Bias": 0.025562817123654887,
+    "best_baseline": "Moving avg (4 wk)",
+    "best_baseline_MAE": 1.437865245788931,
+    "MAE_improvement_vs_best_baseline": 0.09332320332251323,
+    "coverage_P10_P90": 0.7405036094877965,
+    "share_below_P90": 0.8918872464764523,
+    "all_models": {
+      "Combined: direct + top-down": {
+        "MAE": 1.3037,
+        "RMSE": 1.9893,
+        "WAPE": 0.6514,
+        "MASE": 0.9731,
+        "Bias": 0.0256
+      },
+      "Top-down only": {
+        "MAE": 1.321,
+        "RMSE": 2.0424,
+        "WAPE": 0.66,
+        "MASE": 0.9794,
+        "Bias": 0.0118
+      },
+      "HGB Poisson": {
+        "MAE": 1.3257,
+        "RMSE": 2.0681,
+        "WAPE": 0.6624,
+        "MASE": 0.9884,
+        "Bias": 0.0393
+      },
+      "HGB Poisson + price": {
+        "MAE": 1.3283,
+        "RMSE": 2.0785,
+        "WAPE": 0.6637,
+        "MASE": 0.9915,
+        "Bias": 0.0409
+      },
+      "HGB Squared error": {
+        "MAE": 1.3413,
+        "RMSE": 2.1126,
+        "WAPE": 0.6702,
+        "MASE": 0.9975,
+        "Bias": 0.0706
+      },
+      "Ensemble HGB + MA4": {
+        "MAE": 1.3508,
+        "RMSE": 2.1054,
+        "WAPE": 0.6749,
+        "MASE": 0.9983,
+        "Bias": 0.0304
+      },
+      "Moving avg (4 wk)": {
+        "MAE": 1.4379,
+        "RMSE": 2.3833,
+        "WAPE": 0.7184,
+        "MASE": 1.0413,
+        "Bias": 0.0215
+      },
+      "Naive (last week)": {
+        "MAE": 1.6,
+        "RMSE": 2.7939,
+        "WAPE": 0.7994,
+        "MASE": 1.1482,
+        "Bias": 0.011
+      },
+      "Seasonal naive (52 wk)": {
+        "MAE": 1.8455,
+        "RMSE": 3.0952,
+        "WAPE": 0.9221,
+        "MASE": 1.3049,
+        "Bias": 0.0278
+      }
+    },
+    "policy": {
+      "P90 (SmartStock v2)": {
+        "Stockout rate (demand > stock)": 0.0465,
+        "Avg units short": 0.0928,
+        "Avg excess units": 2.8554,
+        "Total stock / demand": 2.3803
+      },
+      "Forecast +20% (v1)": {
+        "Stockout rate (demand > stock)": 0.1611,
+        "Avg units short": 0.3309,
+        "Avg excess units": 1.293,
+        "Total stock / demand": 1.4807
+      },
+      "Last week's sales (manual habit)": {
+        "Stockout rate (demand > stock)": 0.3423,
+        "Avg units short": 0.789,
+        "Avg excess units": 0.8111,
+        "Total stock / demand": 1.011
+      }
+    },
+    "top_features": {
+      "rm_4": 0.1954,
+      "asset": 0.0789,
+      "item": 0.0579,
+      "lag_1": 0.055,
+      "rm_26": 0.0367
+    },
+    "long_horizon_check": [
+      {
+        "origin": "2025-09-01",
+        "method": "HGB recursive (selected)",
+        "series": 1361,
+        "WAPE wk 1-4": 0.6716,
+        "WAPE wk 5-26": 0.7497,
+        "Total-demand error wk 5-26": 0.0976
+      },
+      {
+        "origin": "2025-09-01",
+        "method": "Moving avg (4 wk)",
+        "series": 1361,
+        "WAPE wk 1-4": 0.6878,
+        "WAPE wk 5-26": 0.8476,
+        "Total-demand error wk 5-26": 0.0269
+      },
+      {
+        "origin": "2025-09-01",
+        "method": "Scaled seasonal naive",
+        "series": 1361,
+        "WAPE wk 1-4": 0.8814,
+        "WAPE wk 5-26": 1.0012,
+        "Total-demand error wk 5-26": 0.2783
+      },
+      {
+        "origin": "2025-12-01",
+        "method": "HGB recursive (selected)",
+        "series": 1374,
+        "WAPE wk 1-4": 0.6901,
+        "WAPE wk 5-26": 0.7597,
+        "Total-demand error wk 5-26": 0.0601
+      },
+      {
+        "origin": "2025-12-01",
+        "method": "Moving avg (4 wk)",
+        "series": 1374,
+        "WAPE wk 1-4": 0.9004,
+        "WAPE wk 5-26": 0.882,
+        "Total-demand error wk 5-26": 0.1754
+      },
+      {
+        "origin": "2025-12-01",
+        "method": "Scaled seasonal naive",
+        "series": 1374,
+        "WAPE wk 1-4": 0.9266,
+        "WAPE wk 5-26": 1.0222,
+        "Total-demand error wk 5-26": 0.2974
+      },
+      {
+        "origin": "2026-03-02",
+        "method": "HGB recursive (selected)",
+        "series": 1385,
+        "WAPE wk 1-4": 0.6153,
+        "WAPE wk 5-26": 0.7382,
+        "Total-demand error wk 5-26": 0.0578
+      },
+      {
+        "origin": "2026-03-02",
+        "method": "Moving avg (4 wk)",
+        "series": 1385,
+        "WAPE wk 1-4": 0.6456,
+        "WAPE wk 5-26": 0.8227,
+        "Total-demand error wk 5-26": 0.1324
+      },
+      {
+        "origin": "2026-03-02",
+        "method": "Scaled seasonal naive",
+        "series": 1385,
+        "WAPE wk 1-4": 0.7275,
+        "WAPE wk 5-26": 0.8849,
+        "Total-demand error wk 5-26": 0.0914
+      }
+    ]
+  },
+  "names": {
+    "app1": "App 1 - Warehouse demand",
+    "app2a": "App 2a - Machine totals",
+    "app3": "App 3 - New-site product recommendations",
+    "app2b": "App 2b - Product breakdown"
+  },
+  "app3": {
+    "method": "Category profile",
+    "training_sites": 60,
+    "site_product_rows": 3071,
+    "loso_summary": {
+      "Category profile": {
+        "P@10": 0.51,
+        "NDCG@10": 0.7422,
+        "Spearman": 0.4078,
+        "WAPE (rate)": 0.8244,
+        "AUC": 0.7546,
+        "Brier": 0.1926,
+        "Random P@10 (reference)": 0.1954
+      },
+      "ML (gradient boosting)": {
+        "P@10": 0.46,
+        "NDCG@10": 0.6489,
+        "Spearman": 0.2941,
+        "WAPE (rate)": 0.8339,
+        "AUC": 0.6991,
+        "Brier": 0.2671,
+        "Random P@10 (reference)": 0.1954
+      },
+      "Popularity (fleet best-sellers)": {
+        "P@10": 0.4967,
+        "NDCG@10": 0.7334,
+        "Spearman": 0.4001,
+        "WAPE (rate)": 0.7996,
+        "AUC": 0.7736,
+        "Brier": 0.1891,
+        "Random P@10 (reference)": 0.1954
+      }
+    },
+    "ml_vs_profile_ndcg_wins_losses": [
+      10,
+      50
+    ],
+    "profile_vs_popularity_wins_losses": [
+      34,
+      24
+    ],
+    "sites_per_category": {
+      "Office & corporate": 14,
+      "Staff area": 9,
+      "Sports & fitness": 8,
+      "Transport & transit": 8,
+      "Other / unclassified": 6,
+      "Education": 6,
+      "Automotive": 5,
+      "Hospitality & clubs": 5,
+      "Retail": 3,
+      "Healthcare & aged care": 3,
+      "Industrial & logistics": 3,
+      "Construction site": 2,
+      "Student accommodation": 1,
+      "Car park & storage": 1,
+      "Culture & events": 0
+    },
+    "quality_by_category": {
+      "Office & corporate": {
+        "sites": 14.0,
+        "NDCG@10": 0.7055,
+        "P@10": 0.4286
+      },
+      "Staff area": {
+        "sites": 9.0,
+        "NDCG@10": 0.7166,
+        "P@10": 0.4111
+      },
+      "Sports & fitness": {
+        "sites": 8.0,
+        "NDCG@10": 0.8365,
+        "P@10": 0.6125
+      },
+      "Transport & transit": {
+        "sites": 8.0,
+        "NDCG@10": 0.8487,
+        "P@10": 0.575
+      },
+      "Education": {
+        "sites": 6.0,
+        "NDCG@10": 0.7911,
+        "P@10": 0.4833
+      },
+      "Other / unclassified": {
+        "sites": 6.0,
+        "NDCG@10": 0.7123,
+        "P@10": 0.6333
+      },
+      "Automotive": {
+        "sites": 5.0,
+        "NDCG@10": 0.6533,
+        "P@10": 0.38
+      },
+      "Hospitality & clubs": {
+        "sites": 5.0,
+        "NDCG@10": 0.6298,
+        "P@10": 0.36
+      },
+      "Healthcare & aged care": {
+        "sites": 3.0,
+        "NDCG@10": 0.7629,
+        "P@10": 0.5333
+      },
+      "Retail": {
+        "sites": 3.0,
+        "NDCG@10": 0.6699,
+        "P@10": 0.4667
+      },
+      "Industrial & logistics": {
+        "sites": 3.0,
+        "NDCG@10": 0.6542,
+        "P@10": 0.5
+      },
+      "Construction site": {
+        "sites": 2.0,
+        "NDCG@10": 0.7106,
+        "P@10": 0.45
+      },
+      "Student accommodation": {
+        "sites": 1.0,
+        "NDCG@10": 0.8032,
+        "P@10": 0.5
+      },
+      "Car park & storage": {
+        "sites": 1.0,
+        "NDCG@10": 0.7976,
+        "P@10": 0.7
+      }
+    }
+  },
+  "data_audit": [
+    {
+      "Check": "Distinct Asset IDs: sales log / machine list / matched",
+      "Value": "245 / 149 / 148",
+      "Action": "Machine features derived from the sales log itself (progress report, S1)"
+    },
+    {
+      "Check": "'Place' values with access codes / phone numbers",
+      "Value": "13 of 187 distinct values",
+      "Action": "Column dropped at load: security-sensitive, not needed for forecasting; never shown in outputs or UI"
+    },
+    {
+      "Check": "Raw transactions",
+      "Value": "1,137,008",
+      "Action": "-"
+    },
+    {
+      "Check": "Exact duplicate rows",
+      "Value": "25,549 (2.2%)",
+      "Action": "Removed: likely resent transactions (confirm with client)"
+    },
+    {
+      "Check": "Rows with no item name",
+      "Value": "43.0%",
+      "Action": "Kept: used by App 2a machine-total model; excluded only from per-product models"
+    },
+    {
+      "Check": "Test vends in warehouse ('Unassigned' location)",
+      "Value": "5,150",
+      "Action": "Removed: machines in storage, not customer demand"
+    },
+    {
+      "Check": "Rows in partial first/last weeks",
+      "Value": "6,581",
+      "Action": "Removed: modelling window 2023-09-04 to 2026-08-30 (156 full weeks)"
+    },
+    {
+      "Check": "Asset IDs in sales vs machine list",
+      "Value": "209 vs 149",
+      "Action": "Per-machine models use only machines on the current list"
+    },
+    {
+      "Check": "Machines relocated during the period",
+      "Value": "22 machines, 73,195 rows",
+      "Action": "Per-machine history restarts at the current location"
+    },
+    {
+      "Check": "Machines with >50% unnamed sales (last 13 wks)",
+      "Value": "53",
+      "Action": "Flagged 'Low' confidence; still forecast via App 2a"
+    }
+  ],
+  "confidence_counts": {
+    "High": 62,
+    "Low": 53,
+    "Medium": 1
+  },
+  "service_level_tradeoff": {
+    "app1": [
+      {
+        "Service level": 0.5,
+        "Stockout rate": 0.3638,
+        "Stock / demand": 1.0419
+      },
+      {
+        "Service level": 0.6,
+        "Stockout rate": 0.276,
+        "Stock / demand": 1.1304
+      },
+      {
+        "Service level": 0.7,
+        "Stockout rate": 0.2019,
+        "Stock / demand": 1.2263
+      },
+      {
+        "Service level": 0.8,
+        "Stockout rate": 0.1306,
+        "Stock / demand": 1.3367
+      },
+      {
+        "Service level": 0.9,
+        "Stockout rate": 0.0713,
+        "Stock / demand": 1.4901
+      },
+      {
+        "Service level": 0.95,
+        "Stockout rate": 0.0441,
+        "Stock / demand": 1.6182
+      }
+    ],
+    "app2a": [
+      {
+        "Service level": 0.5,
+        "Stockout rate": 0.438,
+        "Stock / demand": 1.0209
+      },
+      {
+        "Service level": 0.6,
+        "Stockout rate": 0.3592,
+        "Stock / demand": 1.0886
+      },
+      {
+        "Service level": 0.7,
+        "Stockout rate": 0.2723,
+        "Stock / demand": 1.1609
+      },
+      {
+        "Service level": 0.8,
+        "Stockout rate": 0.1948,
+        "Stock / demand": 1.2459
+      },
+      {
+        "Service level": 0.9,
+        "Stockout rate": 0.1259,
+        "Stock / demand": 1.3637
+      },
+      {
+        "Service level": 0.95,
+        "Stockout rate": 0.0763,
+        "Stock / demand": 1.4611
+      }
+    ],
+    "app2b": [
+      {
+        "Service level": 0.5,
+        "Stockout rate": 0.2049,
+        "Stock / demand": 1.2783
+      },
+      {
+        "Service level": 0.6,
+        "Stockout rate": 0.1631,
+        "Stock / demand": 1.4629
+      },
+      {
+        "Service level": 0.7,
+        "Stockout rate": 0.1238,
+        "Stock / demand": 1.6673
+      },
+      {
+        "Service level": 0.8,
+        "Stockout rate": 0.0889,
+        "Stock / demand": 1.9118
+      },
+      {
+        "Service level": 0.9,
+        "Stockout rate": 0.0554,
+        "Stock / demand": 2.2418
+      },
+      {
+        "Service level": 0.95,
+        "Stockout rate": 0.0382,
+        "Stock / demand": 2.5217
+      }
+    ]
+  },
+  "default_service_level": {
+    "app1": 0.9,
+    "app2a": 0.9,
+    "app2b": 0.8
+  },
+  "approach_comparison": [
+    {
+      "app": "app1",
+      "alternative": "Ensemble HGB + MA4",
+      "WAPE alternative": 0.2557,
+      "WAPE HGB Poisson": 0.2625,
+      "folds better": "2/4",
+      "rule says adopt": false,
+      "adopted": false
+    },
+    {
+      "app": "app1",
+      "alternative": "HGB Poisson + price",
+      "WAPE alternative": 0.2567,
+      "WAPE HGB Poisson": 0.2625,
+      "folds better": "3/4",
+      "rule says adopt": true,
+      "adopted": true
+    },
+    {
+      "app": "app1",
+      "alternative": "HGB Squared error",
+      "WAPE alternative": 0.2684,
+      "WAPE HGB Poisson": 0.2625,
+      "folds better": "1/4",
+      "rule says adopt": false,
+      "adopted": false
+    },
+    {
+      "app": "app2a",
+      "alternative": "Ensemble HGB + MA4",
+      "WAPE alternative": 0.2718,
+      "WAPE HGB Poisson": 0.2555,
+      "folds better": "0/4",
+      "rule says adopt": false,
+      "adopted": false
+    },
+    {
+      "app": "app2a",
+      "alternative": "HGB Poisson + price",
+      "WAPE alternative": 0.2575,
+      "WAPE HGB Poisson": 0.2555,
+      "folds better": "2/4",
+      "rule says adopt": false,
+      "adopted": false
+    },
+    {
+      "app": "app2a",
+      "alternative": "HGB Squared error",
+      "WAPE alternative": 0.2588,
+      "WAPE HGB Poisson": 0.2555,
+      "folds better": "2/4",
+      "rule says adopt": false,
+      "adopted": false
+    },
+    {
+      "app": "app2b",
+      "alternative": "Combined: direct + top-down",
+      "WAPE alternative": 0.6514,
+      "WAPE HGB Poisson": 0.6624,
+      "folds better": "4/4",
+      "rule says adopt": true,
+      "adopted": true
+    },
+    {
+      "app": "app2b",
+      "alternative": "Ensemble HGB + MA4",
+      "WAPE alternative": 0.6749,
+      "WAPE HGB Poisson": 0.6624,
+      "folds better": "1/4",
+      "rule says adopt": false,
+      "adopted": false
+    },
+    {
+      "app": "app2b",
+      "alternative": "HGB Poisson + price",
+      "WAPE alternative": 0.6637,
+      "WAPE HGB Poisson": 0.6624,
+      "folds better": "0/4",
+      "rule says adopt": false,
+      "adopted": false
+    },
+    {
+      "app": "app2b",
+      "alternative": "HGB Squared error",
+      "WAPE alternative": 0.6702,
+      "WAPE HGB Poisson": 0.6624,
+      "folds better": "0/4",
+      "rule says adopt": false,
+      "adopted": false
+    },
+    {
+      "app": "app2b",
+      "alternative": "Top-down only",
+      "WAPE alternative": 0.66,
+      "WAPE HGB Poisson": 0.6624,
+      "folds better": "2/4",
+      "rule says adopt": false,
+      "adopted": false
+    }
+  ],
+  "revenue_summary": [
+    {
+      "app": "App 1 - Warehouse demand",
+      "Next 4 weeks - expected ($)": 63126.47,
+      "Next 4 weeks - range: 90% minimum to P90 ($)": "22,088 - 87,706",
+      "Next 6 months - expected ($)": 311358.2
+    },
+    {
+      "app": "App 2a - Machine totals",
+      "Next 4 weeks - expected ($)": 96950.99,
+      "Next 4 weeks - range: 90% minimum to P90 ($)": "63,692 - 128,198",
+      "Next 6 months - expected ($)": 540792.11
+    },
+    {
+      "app": "App 2b - Product breakdown",
+      "Next 4 weeks - expected ($)": 58531.43,
+      "Next 4 weeks - range: 90% minimum to P90 ($)": "28,126 - 117,782",
+      "Next 6 months - expected ($)": 317892.01
+    }
+  ],
+  "revenue_monthly": {
+    "App 1 - Warehouse demand": {
+      "2026-09": 66648.0,
+      "2026-10": 67150.0,
+      "2026-11": 66942.0,
+      "2026-12": 53550.0,
+      "2027-01": 39292.0,
+      "2027-02": 17777.0
+    },
+    "App 2a - Machine totals": {
+      "2026-09": 103266.0,
+      "2026-10": 102903.0,
+      "2026-11": 99609.0,
+      "2026-12": 80838.0,
+      "2027-01": 67658.0,
+      "2027-02": 86518.0
+    },
+    "App 2b - Product breakdown": {
+      "2026-09": 62261.0,
+      "2026-10": 63039.0,
+      "2026-11": 61054.0,
+      "2026-12": 47167.0,
+      "2027-01": 38407.0,
+      "2027-02": 45964.0
+    }
+  },
+  "priority_and_calibration": {
+    "app1": {
+      "calibration": {
+        "method": "raw",
+        "z": {
+          "0.1": -1.2816,
+          "0.8": 0.8416,
+          "0.9": 1.2816,
+          "0.95": 1.6449
+        },
+        "heldout_mean_abs_coverage_error": {
+          "raw": 0.025801282051282043,
+          "conformal": 0.06550480769230768
+        },
+        "levels": [
+          0.1,
+          0.8,
+          0.9,
+          0.95
+        ],
+        "min_confidence": 0.9,
+        "priority_service_levels": {
+          "High": 0.95,
+          "Medium": 0.9,
+          "Low": 0.8
+        },
+        "sigma_floor": 0.5,
+        "calibration_rows": 2496
+      },
+      "coverage_heldout": [
+        {
+          "Quantity": "Minimum (90% sure it sells)",
+          "Target": 0.9,
+          "Raw": 0.9575,
+          "Calibrated": 0.9415
+        },
+        {
+          "Quantity": "Safe stock at 80%",
+          "Target": 0.8,
+          "Raw": 0.8349,
+          "Calibrated": 0.6867
+        },
+        {
+          "Quantity": "Safe stock at 90%",
+          "Target": 0.9,
+          "Raw": 0.9079,
+          "Calibrated": 0.8333
+        },
+        {
+          "Quantity": "Safe stock at 95%",
+          "Target": 0.95,
+          "Raw": 0.9471,
+          "Calibrated": 0.9095
+        }
+      ],
+      "policy_simulation": {
+        "Flat 90% for every product": {
+          "Stock / demand": 1.3946,
+          "Stockouts - all": 0.0921,
+          "Stockouts - High": 0.0882,
+          "Stockouts - Medium": 0.1384,
+          "Stockouts - Low": 0.0644,
+          "Stock vs priority-based": -0.0621,
+          "Stock value ($)": 154446.7995,
+          "Value vs priority-based": -0.0639
+        },
+        "Priority-based (95 / 90 / 80%)": {
+          "Stock / demand": 1.487,
+          "Stockouts - all": 0.0761,
+          "Stockouts - High": 0.0513,
+          "Stockouts - Medium": 0.1384,
+          "Stockouts - Low": 0.0947,
+          "Stock vs priority-based": 0.0,
+          "Stock value ($)": 164982.3134,
+          "Value vs priority-based": 0.0
+        },
+        "Cut step 1: Low -> minimum": {
+          "Stock / demand": 1.4389,
+          "Stockouts - all": 0.2067,
+          "Stockouts - High": 0.0513,
+          "Stockouts - Medium": 0.1384,
+          "Stockouts - Low": 0.7121,
+          "Stock vs priority-based": -0.0324,
+          "Stock value ($)": 160091.7627,
+          "Value vs priority-based": -0.0296
+        },
+        "Cut step 2: + Medium -> 80%": {
+          "Stock / demand": 1.4239,
+          "Stockouts - all": 0.2139,
+          "Stockouts - High": 0.0513,
+          "Stockouts - Medium": 0.1786,
+          "Stockouts - Low": 0.7121,
+          "Stock vs priority-based": -0.0425,
+          "Stock value ($)": 158387.2933,
+          "Value vs priority-based": -0.04
+        },
+        "Cut step 3: + Medium -> minimum": {
+          "Stock / demand": 1.3466,
+          "Stockouts - all": 0.3518,
+          "Stockouts - High": 0.0513,
+          "Stockouts - Medium": 0.9464,
+          "Stockouts - Low": 0.7121,
+          "Stock vs priority-based": -0.0944,
+          "Stock value ($)": 149667.1946,
+          "Value vs priority-based": -0.0928
+        }
+      },
+      "priority_counts": {
+        "High": 101,
+        "Low": 37,
+        "Medium": 18
+      },
+      "class_counts": {
+        "AX": 63,
+        "BX": 37,
+        "CY": 25,
+        "CZ": 12,
+        "CX": 11,
+        "BY": 7,
+        "AY": 1
+      }
+    },
+    "app2a": {
+      "calibration": {
+        "method": "raw",
+        "z": {
+          "0.1": -1.2816,
+          "0.8": 0.8416,
+          "0.9": 1.2816,
+          "0.95": 1.6449
+        },
+        "heldout_mean_abs_coverage_error": {
+          "raw": 0.027596618357487918,
+          "conformal": 0.03623188405797104
+        },
+        "levels": [
+          0.1,
+          0.8,
+          0.9,
+          0.95
+        ],
+        "min_confidence": 0.9,
+        "priority_service_levels": {
+          "High": 0.95,
+          "Medium": 0.9,
+          "Low": 0.8
+        },
+        "sigma_floor": 0.5,
+        "calibration_rows": 1612
+      },
+      "coverage_heldout": [
+        {
+          "Quantity": "Minimum (90% sure it sells)",
+          "Target": 0.9,
+          "Raw": 0.8913,
+          "Calibrated": 0.9348
+        },
+        {
+          "Quantity": "Safe stock at 80%",
+          "Target": 0.8,
+          "Raw": 0.7802,
+          "Calibrated": 0.744
+        },
+        {
+          "Quantity": "Safe stock at 90%",
+          "Target": 0.9,
+          "Raw": 0.8563,
+          "Calibrated": 0.8744
+        },
+        {
+          "Quantity": "Safe stock at 95%",
+          "Target": 0.95,
+          "Raw": 0.9118,
+          "Calibrated": 0.9215
+        }
+      ],
+      "policy_simulation": {
+        "Flat 90% for every product": {
+          "Stock / demand": 1.3241,
+          "Stockouts - all": 0.1437,
+          "Stockouts - High": 0.1399,
+          "Stockouts - Medium": 0.1554,
+          "Stockouts - Low": 0.1458,
+          "Stock vs priority-based": -0.0433,
+          "Stock value ($)": 234770.6016,
+          "Value vs priority-based": -0.0456
+        },
+        "Priority-based (95 / 90 / 80%)": {
+          "Stock / demand": 1.3839,
+          "Stockouts - all": 0.1171,
+          "Stockouts - High": 0.0858,
+          "Stockouts - Medium": 0.1554,
+          "Stockouts - Low": 0.1944,
+          "Stock vs priority-based": 0.0,
+          "Stock value ($)": 246000.1635,
+          "Value vs priority-based": 0.0
+        },
+        "Cut step 1: Low -> minimum": {
+          "Stock / demand": 1.3267,
+          "Stockouts - all": 0.2283,
+          "Stockouts - High": 0.0858,
+          "Stockouts - Medium": 0.1554,
+          "Stockouts - Low": 0.8333,
+          "Stock vs priority-based": -0.0414,
+          "Stock value ($)": 236727.5961,
+          "Value vs priority-based": -0.0377
+        },
+        "Cut step 2: + Medium -> 80%": {
+          "Stock / demand": 1.3106,
+          "Stockouts - all": 0.2428,
+          "Stockouts - High": 0.0858,
+          "Stockouts - Medium": 0.2365,
+          "Stockouts - Low": 0.8333,
+          "Stock vs priority-based": -0.053,
+          "Stock value ($)": 234086.0165,
+          "Value vs priority-based": -0.0484
+        },
+        "Cut step 3: + Medium -> minimum": {
+          "Stock / demand": 1.232,
+          "Stockouts - all": 0.3599,
+          "Stockouts - High": 0.0858,
+          "Stockouts - Medium": 0.8919,
+          "Stockouts - Low": 0.8333,
+          "Stock vs priority-based": -0.1098,
+          "Stock value ($)": 221223.8439,
+          "Value vs priority-based": -0.1007
+        }
+      },
+      "priority_counts": {
+        "High": 72,
+        "Low": 18,
+        "Medium": 18
+      },
+      "class_counts": {
+        "AX": 43,
+        "BX": 20,
+        "CY": 12,
+        "BY": 9,
+        "AY": 8,
+        "CX": 7,
+        "CZ": 6,
+        "BZ": 2,
+        "AZ": 1
+      }
+    },
+    "app2b": {
+      "calibration": {
+        "method": "conformal",
+        "z": {
+          "0.1": -0.44999999999999973,
+          "0.8": 0.03000000000000025,
+          "0.9": 0.7400000000000002,
+          "0.95": 1.38
+        },
+        "heldout_mean_abs_coverage_error": {
+          "raw": 0.06235017123287667,
+          "conformal": 0.011408390410958896
+        },
+        "levels": [
+          0.1,
+          0.8,
+          0.9,
+          0.95
+        ],
+        "min_confidence": 0.9,
+        "priority_service_levels": {
+          "High": 0.95,
+          "Medium": 0.9,
+          "Low": 0.8
+        },
+        "sigma_floor": 0.5,
+        "calibration_rows": 23272
+      },
+      "coverage_heldout": [
+        {
+          "Quantity": "Minimum (90% sure it sells)",
+          "Target": 0.9,
+          "Raw": 0.9943,
+          "Calibrated": 0.9057
+        },
+        {
+          "Quantity": "Safe stock at 80%",
+          "Target": 0.8,
+          "Raw": 0.904,
+          "Calibrated": 0.7849
+        },
+        {
+          "Quantity": "Safe stock at 90%",
+          "Target": 0.9,
+          "Raw": 0.9403,
+          "Calibrated": 0.8848
+        },
+        {
+          "Quantity": "Safe stock at 95%",
+          "Target": 0.95,
+          "Raw": 0.9607,
+          "Calibrated": 0.9403
+        }
+      ],
+      "policy_simulation": {
+        "Flat 90% for every product": {
+          "Stock / demand": 1.7396,
+          "Stockouts - all": 0.1152,
+          "Stockouts - High": 0.1249,
+          "Stockouts - Medium": 0.0989,
+          "Stockouts - Low": 0.1036,
+          "Stock vs priority-based": -0.141,
+          "Stock value ($)": 182048.8718,
+          "Value vs priority-based": -0.1461
+        },
+        "Priority-based (95 / 90 / 80%)": {
+          "Stock / demand": 2.0251,
+          "Stockouts - all": 0.085,
+          "Stockouts - High": 0.0623,
+          "Stockouts - Medium": 0.0989,
+          "Stockouts - Low": 0.154,
+          "Stock vs priority-based": 0.0,
+          "Stock value ($)": 213196.4881,
+          "Value vs priority-based": 0.0
+        },
+        "Cut step 1: Low -> minimum": {
+          "Stock / demand": 1.9343,
+          "Stockouts - all": 0.128,
+          "Stockouts - High": 0.0623,
+          "Stockouts - Medium": 0.0989,
+          "Stockouts - Low": 0.4479,
+          "Stock vs priority-based": -0.0448,
+          "Stock value ($)": 204714.1655,
+          "Value vs priority-based": -0.0398
+        },
+        "Cut step 2: + Medium -> 80%": {
+          "Stock / demand": 1.8353,
+          "Stockouts - all": 0.1513,
+          "Stockouts - High": 0.0623,
+          "Stockouts - Medium": 0.1904,
+          "Stockouts - Low": 0.4479,
+          "Stock vs priority-based": -0.0937,
+          "Stock value ($)": 194825.1514,
+          "Value vs priority-based": -0.0862
+        },
+        "Cut step 3: + Medium -> minimum": {
+          "Stock / demand": 1.6579,
+          "Stockouts - all": 0.2284,
+          "Stockouts - High": 0.0623,
+          "Stockouts - Medium": 0.4936,
+          "Stockouts - Low": 0.4479,
+          "Stock vs priority-based": -0.1813,
+          "Stock value ($)": 177250.9898,
+          "Value vs priority-based": -0.1686
+        }
+      },
+      "priority_counts": {
+        "High": 879,
+        "Medium": 382,
+        "Low": 210
+      },
+      "class_counts": {
+        "AY": 476,
+        "AZ": 326,
+        "BZ": 248,
+        "CZ": 182,
+        "BY": 134,
+        "AX": 76,
+        "CY": 28,
+        "BX": 1
+      }
+    }
+  }
+}

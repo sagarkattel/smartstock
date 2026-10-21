@@ -1,0 +1,11 @@
+Check,Value,Action
+Distinct Asset IDs: sales log / machine list / matched,245 / 149 / 148,"Machine features derived from the sales log itself (progress report, S1)"
+'Place' values with access codes / phone numbers,13 of 187 distinct values,"Column dropped at load: security-sensitive, not needed for forecasting; never shown in outputs or UI"
+Raw transactions,"1,137,008",-
+Exact duplicate rows,"25,549 (2.2%)",Removed: likely resent transactions (confirm with client)
+Rows with no item name,43.0%,Kept: used by App 2a machine-total model; excluded only from per-product models
+Test vends in warehouse ('Unassigned' location),"5,150","Removed: machines in storage, not customer demand"
+Rows in partial first/last weeks,"6,581",Removed: modelling window 2023-09-04 to 2026-08-30 (156 full weeks)
+Asset IDs in sales vs machine list,209 vs 149,Per-machine models use only machines on the current list
+Machines relocated during the period,"22 machines, 73,195 rows",Per-machine history restarts at the current location
+Machines with >50% unnamed sales (last 13 wks),53,Flagged 'Low' confidence; still forecast via App 2a
