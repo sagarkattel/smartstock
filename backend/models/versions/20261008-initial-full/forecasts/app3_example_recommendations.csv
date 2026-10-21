@@ -1,0 +1,111 @@
+Item,price,ptype,Sites_stocked_fleet,Likelihood_regular_seller,Expected_units_per_machine_week,Expected_revenue_per_machine_week,Lift_vs_fleet,Similar_sites_with_product,Confidence,query,list,similar_sites,machine_hint
+COOL RIDGE WATER 600ML,4.94,Drink,5,0.705,7.21,35.64,1.17,1,Low,Sports & fitness,Expected best-sellers,8,Similar mix to the fleet (65% drinks): a combo machine suits
+Mount Franklin Water,4.2,Drink,6,0.91,5.48,23.0,1.22,5,High,Sports & fitness,Expected best-sellers,8,Similar mix to the fleet (65% drinks): a combo machine suits
+MOUNT EVEREST WATER,3.78,Drink,39,0.747,4.5,17.03,1.13,1,Low,Sports & fitness,Expected best-sellers,8,Similar mix to the fleet (65% drinks): a combo machine suits
+POWERADE MOUNTAIN BLAST 600ML,5.5,Drink,20,0.519,2.69,14.77,1.66,5,High,Sports & fitness,Expected best-sellers,8,Similar mix to the fleet (65% drinks): a combo machine suits
+RED BULL REGULAR 250ML,4.64,Drink,40,0.635,2.45,11.36,1.51,2,Medium,Sports & fitness,Expected best-sellers,8,Similar mix to the fleet (65% drinks): a combo machine suits
+COKE LIFE 375ML,3.14,Drink,30,0.706,2.14,6.71,0.77,2,Medium,Sports & fitness,Expected best-sellers,8,Similar mix to the fleet (65% drinks): a combo machine suits
+COKE ZERO 600ML,5.95,Drink,16,0.628,1.97,11.74,1.02,4,Medium,Sports & fitness,Expected best-sellers,8,Similar mix to the fleet (65% drinks): a combo machine suits
+GATORADE BLBOLT  600ML,6.12,Drink,28,0.537,1.87,11.43,1.66,1,Low,Sports & fitness,Expected best-sellers,8,Similar mix to the fleet (65% drinks): a combo machine suits
+COCA COLA 600ML,6.46,Drink,13,0.754,1.86,12.04,1.1,5,High,Sports & fitness,Expected best-sellers,8,Similar mix to the fleet (65% drinks): a combo machine suits
+COKE LIFE 600ML,5.68,Drink,21,0.701,1.68,9.54,1.12,5,High,Sports & fitness,Expected best-sellers,8,Similar mix to the fleet (65% drinks): a combo machine suits
+POWERADE MOUNTAIN BLAST 600ML,5.5,Drink,20,0.519,2.69,14.77,1.66,5,High,Sports & fitness,Distinctive for this site type,8,Similar mix to the fleet (65% drinks): a combo machine suits
+RED BULL REGULAR 250ML,4.64,Drink,40,0.635,2.45,11.36,1.51,2,Medium,Sports & fitness,Distinctive for this site type,8,Similar mix to the fleet (65% drinks): a combo machine suits
+POWERADE BERRY ICE 600ML,5.68,Drink,15,0.664,1.62,9.22,1.48,5,High,Sports & fitness,Distinctive for this site type,8,Similar mix to the fleet (65% drinks): a combo machine suits
+GOBSTOPPER,4.24,Snack/food,14,0.215,0.62,2.63,1.32,4,Medium,Sports & fitness,Distinctive for this site type,8,Similar mix to the fleet (65% drinks): a combo machine suits
+COKE NO SUGAR 600ML,5.94,Drink,18,0.854,1.6,9.48,1.23,5,High,Sports & fitness,Distinctive for this site type,8,Similar mix to the fleet (65% drinks): a combo machine suits
+Mount Franklin Water,4.2,Drink,6,0.91,5.48,23.0,1.22,5,High,Sports & fitness,Distinctive for this site type,8,Similar mix to the fleet (65% drinks): a combo machine suits
+NERDS GRAPE & STRAWBERRY 45G,4.65,Snack/food,12,0.196,0.63,2.94,1.2,4,Medium,Sports & fitness,Distinctive for this site type,8,Similar mix to the fleet (65% drinks): a combo machine suits
+Chikadees,3.58,Snack/food,22,0.403,0.72,2.57,1.13,4,Medium,Sports & fitness,Distinctive for this site type,8,Similar mix to the fleet (65% drinks): a combo machine suits
+COKE LIFE 600ML,5.68,Drink,21,0.701,1.68,9.54,1.12,5,High,Sports & fitness,Distinctive for this site type,8,Similar mix to the fleet (65% drinks): a combo machine suits
+COCA COLA 600ML,6.46,Drink,13,0.754,1.86,12.04,1.1,5,High,Sports & fitness,Distinctive for this site type,8,Similar mix to the fleet (65% drinks): a combo machine suits
+MOUNT EVEREST WATER,3.78,Drink,39,0.888,6.16,23.29,1.54,6,High,Education,Expected best-sellers,6,Similar mix to the fleet (63% drinks): a combo machine suits
+COOL RIDGE WATER 600ML,4.94,Drink,5,0.606,6.16,30.43,1.0,0,Low,Education,Expected best-sellers,6,Similar mix to the fleet (63% drinks): a combo machine suits
+Mount Franklin Water,4.2,Drink,6,0.761,4.5,18.91,1.0,0,Low,Education,Expected best-sellers,6,Similar mix to the fleet (63% drinks): a combo machine suits
+COKE LIFE 375ML,3.14,Drink,30,0.79,2.01,6.32,0.73,4,Medium,Education,Expected best-sellers,6,Similar mix to the fleet (63% drinks): a combo machine suits
+LIVING WATER 500ML,4.2,Drink,11,0.561,1.96,8.25,1.0,0,Low,Education,Expected best-sellers,6,Similar mix to the fleet (63% drinks): a combo machine suits
+COCA COLA 600ML,6.46,Drink,13,0.678,1.69,10.91,1.0,0,Low,Education,Expected best-sellers,6,Similar mix to the fleet (63% drinks): a combo machine suits
+Assam milk tea,4.2,Drink,6,0.487,1.57,6.61,1.72,1,Low,Education,Expected best-sellers,6,Similar mix to the fleet (63% drinks): a combo machine suits
+COKE NO SUGAR 375ML,3.01,Drink,40,0.593,1.52,4.57,0.7,4,Medium,Education,Expected best-sellers,6,Similar mix to the fleet (63% drinks): a combo machine suits
+RED BULL REGULAR 250ML,4.64,Drink,40,0.353,1.52,7.06,0.94,6,High,Education,Expected best-sellers,6,Similar mix to the fleet (63% drinks): a combo machine suits
+COKE ZERO 600ML,5.95,Drink,16,0.349,1.47,8.76,0.76,1,Low,Education,Expected best-sellers,6,Similar mix to the fleet (63% drinks): a combo machine suits
+LIPTON ICE TEA LIGHT PEACH 500ML,5.86,Drink,26,0.215,1.14,6.67,1.69,4,Medium,Education,Distinctive for this site type,6,Similar mix to the fleet (63% drinks): a combo machine suits
+MOUNT EVEREST WATER,3.78,Drink,39,0.888,6.16,23.29,1.54,6,High,Education,Distinctive for this site type,6,Similar mix to the fleet (63% drinks): a combo machine suits
+BOSS COFFEE CARAMEL,4.7,Drink,3,0.385,1.02,4.78,1.52,2,Medium,Education,Distinctive for this site type,6,Similar mix to the fleet (63% drinks): a combo machine suits
+PIRANHA VEGE BBQ 45G,3.05,Snack/food,6,0.057,0.57,1.74,1.27,2,Medium,Education,Distinctive for this site type,6,Similar mix to the fleet (63% drinks): a combo machine suits
+UP & GO STRAWBERRY 500ML,5.14,Drink,6,0.269,0.63,3.25,1.19,3,Medium,Education,Distinctive for this site type,6,Similar mix to the fleet (63% drinks): a combo machine suits
+HELLO PANDA STRAWBERRY,3.02,Snack/food,8,0.301,0.74,2.23,1.17,2,Medium,Education,Distinctive for this site type,6,Similar mix to the fleet (63% drinks): a combo machine suits
+HELLO PANDA CHOCLATE,3.25,Snack/food,9,0.342,0.99,3.23,1.15,2,Medium,Education,Distinctive for this site type,6,Similar mix to the fleet (63% drinks): a combo machine suits
+NBBY PNUT 50G,3.87,Snack/food,19,0.278,0.54,2.11,1.13,2,Medium,Education,Distinctive for this site type,6,Similar mix to the fleet (63% drinks): a combo machine suits
+ALOE VERA FRESH GREEN 500ML,5.55,Drink,42,0.246,0.94,5.23,1.11,4,Medium,Education,Distinctive for this site type,6,Similar mix to the fleet (63% drinks): a combo machine suits
+BOSS COFFEE MOCHA,4.27,Drink,7,0.309,0.97,4.13,1.05,3,Medium,Education,Distinctive for this site type,6,Similar mix to the fleet (63% drinks): a combo machine suits
+COOL RIDGE WATER 600ML,4.94,Drink,5,0.764,8.56,42.26,1.39,2,Medium,Transport & transit,Expected best-sellers,8,Similar mix to the fleet (65% drinks): a combo machine suits
+MOUNT EVEREST WATER,3.78,Drink,39,0.713,6.23,23.56,1.56,4,Medium,Transport & transit,Expected best-sellers,8,Similar mix to the fleet (65% drinks): a combo machine suits
+Mount Franklin Water,4.2,Drink,6,0.761,4.5,18.91,1.0,0,Low,Transport & transit,Expected best-sellers,8,Similar mix to the fleet (65% drinks): a combo machine suits
+LIVING WATER 500ML,4.2,Drink,11,0.835,2.77,11.62,1.41,5,High,Transport & transit,Expected best-sellers,8,Similar mix to the fleet (65% drinks): a combo machine suits
+COKE LIFE 600ML,5.68,Drink,21,0.601,2.67,15.18,1.78,3,Medium,Transport & transit,Expected best-sellers,8,Similar mix to the fleet (65% drinks): a combo machine suits
+COKE LIFE 375ML,3.14,Drink,30,0.883,2.58,8.12,0.94,1,Low,Transport & transit,Expected best-sellers,8,Similar mix to the fleet (65% drinks): a combo machine suits
+COKE NO SUGAR 375ML,3.01,Drink,40,0.736,2.39,7.18,1.11,4,Medium,Transport & transit,Expected best-sellers,8,Similar mix to the fleet (65% drinks): a combo machine suits
+RED BULL REG 473ML,7.03,Drink,26,0.765,2.38,16.74,1.74,5,High,Transport & transit,Expected best-sellers,8,Similar mix to the fleet (65% drinks): a combo machine suits
+Monster ultra,5.62,Drink,39,0.756,2.15,12.07,1.34,7,High,Transport & transit,Expected best-sellers,8,Similar mix to the fleet (65% drinks): a combo machine suits
+RED BULL SUGFREE 250ML,4.57,Drink,17,0.505,2.12,9.71,1.7,3,Medium,Transport & transit,Expected best-sellers,8,Similar mix to the fleet (65% drinks): a combo machine suits
+V BLUE 500ML,6.37,Drink,21,0.684,1.94,12.35,2.11,3,Medium,Transport & transit,Distinctive for this site type,8,Similar mix to the fleet (65% drinks): a combo machine suits
+COKE LIFE 600ML,5.68,Drink,21,0.601,2.67,15.18,1.78,3,Medium,Transport & transit,Distinctive for this site type,8,Similar mix to the fleet (65% drinks): a combo machine suits
+RED BULL REG 473ML,7.03,Drink,26,0.765,2.38,16.74,1.74,5,High,Transport & transit,Distinctive for this site type,8,Similar mix to the fleet (65% drinks): a combo machine suits
+RED BULL SUGFREE 250ML,4.57,Drink,17,0.505,2.12,9.71,1.7,3,Medium,Transport & transit,Distinctive for this site type,8,Similar mix to the fleet (65% drinks): a combo machine suits
+OAK CHOCOLATE 500ML,5.97,Drink,31,0.596,1.36,8.11,1.65,7,High,Transport & transit,Distinctive for this site type,8,Similar mix to the fleet (65% drinks): a combo machine suits
+MOUNT EVEREST WATER,3.78,Drink,39,0.713,6.23,23.56,1.56,4,Medium,Transport & transit,Distinctive for this site type,8,Similar mix to the fleet (65% drinks): a combo machine suits
+Monster Mango Loco,5.68,Drink,34,0.707,2.02,11.48,1.51,6,High,Transport & transit,Distinctive for this site type,8,Similar mix to the fleet (65% drinks): a combo machine suits
+ALOE VERA FRESH LYCHEE 500ML,5.65,Drink,16,0.385,0.99,5.59,1.47,2,Medium,Transport & transit,Distinctive for this site type,8,Similar mix to the fleet (65% drinks): a combo machine suits
+Kit Kat Chunky 45g,3.56,Snack/food,36,0.678,1.34,4.76,1.43,3,Medium,Transport & transit,Distinctive for this site type,8,Similar mix to the fleet (65% drinks): a combo machine suits
+LIVING WATER 500ML,4.2,Drink,11,0.835,2.77,11.62,1.41,5,High,Transport & transit,Distinctive for this site type,8,Similar mix to the fleet (65% drinks): a combo machine suits
+MOUNT EVEREST WATER,3.78,Drink,39,0.726,5.25,19.85,1.32,8,High,Construction site + Staff area,Expected best-sellers,11,Similar mix to the fleet (62% drinks): a combo machine suits
+COOL RIDGE WATER 600ML,4.94,Drink,5,0.705,4.93,24.35,0.8,1,Low,Construction site + Staff area,Expected best-sellers,11,Similar mix to the fleet (62% drinks): a combo machine suits
+Mount Franklin Water,4.2,Drink,6,0.761,4.5,18.91,1.0,0,Low,Construction site + Staff area,Expected best-sellers,11,Similar mix to the fleet (62% drinks): a combo machine suits
+COKE NO SUGAR 375ML,3.01,Drink,40,0.763,2.99,9.0,1.39,9,High,Construction site + Staff area,Expected best-sellers,11,Similar mix to the fleet (62% drinks): a combo machine suits
+COKE LIFE 375ML,3.14,Drink,30,0.953,2.65,8.31,0.96,7,High,Construction site + Staff area,Expected best-sellers,11,Similar mix to the fleet (62% drinks): a combo machine suits
+Monster ultra,5.62,Drink,39,0.778,1.86,10.44,1.15,8,High,Construction site + Staff area,Expected best-sellers,11,Similar mix to the fleet (62% drinks): a combo machine suits
+COCA COLA 375ML,3.1,Drink,20,0.9,1.84,5.69,1.02,5,High,Construction site + Staff area,Expected best-sellers,11,Similar mix to the fleet (62% drinks): a combo machine suits
+Monster Mango Loco,5.68,Drink,34,0.437,1.72,9.76,1.28,7,High,Construction site + Staff area,Expected best-sellers,11,Similar mix to the fleet (62% drinks): a combo machine suits
+VANILLA COKE 375ML,3.27,Drink,14,0.551,1.71,5.6,2.13,4,Medium,Construction site + Staff area,Expected best-sellers,11,Similar mix to the fleet (62% drinks): a combo machine suits
+LIVING WATER 500ML,4.2,Drink,11,0.421,1.62,6.81,0.83,1,Low,Construction site + Staff area,Expected best-sellers,11,Similar mix to the fleet (62% drinks): a combo machine suits
+VANILLA COKE 375ML,3.27,Drink,14,0.551,1.71,5.6,2.13,4,Medium,Construction site + Staff area,Distinctive for this site type,11,Similar mix to the fleet (62% drinks): a combo machine suits
+LIPTON ICE TEA LIGHT PEACH 500ML,5.86,Drink,26,0.215,1.17,6.88,1.75,4,Medium,Construction site + Staff area,Distinctive for this site type,11,Similar mix to the fleet (62% drinks): a combo machine suits
+V BLUE 500ML,6.37,Drink,21,0.513,1.59,10.11,1.73,5,High,Construction site + Staff area,Distinctive for this site type,11,Similar mix to the fleet (62% drinks): a combo machine suits
+SMT CRINKLE CUT ORIG 27G,3.69,Snack/food,22,0.314,1.04,3.85,1.62,6,High,Construction site + Staff area,Distinctive for this site type,11,Similar mix to the fleet (62% drinks): a combo machine suits
+BOSS COFFEE CARAMEL,4.7,Drink,3,0.385,1.02,4.78,1.52,2,Medium,Construction site + Staff area,Distinctive for this site type,11,Similar mix to the fleet (62% drinks): a combo machine suits
+V GREEN 500ML,6.22,Drink,18,0.497,1.28,7.94,1.51,5,High,Construction site + Staff area,Distinctive for this site type,11,Similar mix to the fleet (62% drinks): a combo machine suits
+PIRANHA SOY CRISPS SWEET CHILLI & LIME23G,4.61,Snack/food,20,0.296,0.73,3.35,1.42,5,High,Construction site + Staff area,Distinctive for this site type,11,Similar mix to the fleet (62% drinks): a combo machine suits
+COKE NO SUGAR 375ML,3.01,Drink,40,0.763,2.99,9.0,1.39,9,High,Construction site + Staff area,Distinctive for this site type,11,Similar mix to the fleet (62% drinks): a combo machine suits
+My muscle chef protein bar,5.39,Snack/food,28,0.436,1.27,6.87,1.37,4,Medium,Construction site + Staff area,Distinctive for this site type,11,Similar mix to the fleet (62% drinks): a combo machine suits
+MF SNICKERS 50G,3.64,Snack/food,49,0.464,0.96,3.48,1.34,9,High,Construction site + Staff area,Distinctive for this site type,11,Similar mix to the fleet (62% drinks): a combo machine suits
+COOL RIDGE WATER 600ML,4.94,Drink,5,0.705,4.93,24.35,0.8,1,Low,Office & corporate + Staff area,Expected best-sellers,21,Similar mix to the fleet (61% drinks): a combo machine suits
+MOUNT EVEREST WATER,3.78,Drink,39,0.631,4.75,17.97,1.19,16,High,Office & corporate + Staff area,Expected best-sellers,21,Similar mix to the fleet (61% drinks): a combo machine suits
+Mount Franklin Water,4.2,Drink,6,0.761,4.5,18.91,1.0,0,Low,Office & corporate + Staff area,Expected best-sellers,21,Similar mix to the fleet (61% drinks): a combo machine suits
+COKE NO SUGAR 375ML,3.01,Drink,40,0.825,3.07,9.25,1.42,19,High,Office & corporate + Staff area,Expected best-sellers,21,Similar mix to the fleet (61% drinks): a combo machine suits
+COKE LIFE 375ML,3.14,Drink,30,0.969,2.74,8.6,0.99,12,High,Office & corporate + Staff area,Expected best-sellers,21,Similar mix to the fleet (61% drinks): a combo machine suits
+COKE ZERO 375ML,3.17,Drink,8,0.811,2.0,6.35,1.47,3,Medium,Office & corporate + Staff area,Expected best-sellers,21,Similar mix to the fleet (61% drinks): a combo machine suits
+COCA COLA 375ML,3.1,Drink,20,0.747,1.99,6.16,1.1,12,High,Office & corporate + Staff area,Expected best-sellers,21,Similar mix to the fleet (61% drinks): a combo machine suits
+Assam milk tea,4.2,Drink,6,0.59,1.97,8.27,2.16,2,Medium,Office & corporate + Staff area,Expected best-sellers,21,Similar mix to the fleet (61% drinks): a combo machine suits
+PEPSI MAX 375ML,3.0,Drink,30,0.588,1.83,5.49,1.42,16,High,Office & corporate + Staff area,Expected best-sellers,21,Similar mix to the fleet (61% drinks): a combo machine suits
+Monster ultra,5.62,Drink,39,0.66,1.71,9.6,1.06,13,High,Office & corporate + Staff area,Expected best-sellers,21,Similar mix to the fleet (61% drinks): a combo machine suits
+V NO SUGAR 250ML,4.2,Drink,11,0.353,1.13,4.76,2.2,5,High,Office & corporate + Staff area,Distinctive for this site type,21,Similar mix to the fleet (61% drinks): a combo machine suits
+Assam milk tea,4.2,Drink,6,0.59,1.97,8.27,2.16,2,Medium,Office & corporate + Staff area,Distinctive for this site type,21,Similar mix to the fleet (61% drinks): a combo machine suits
+LIPTON ICE TEA LIGHT PEACH 500ML,5.86,Drink,26,0.25,1.33,7.81,1.98,11,High,Office & corporate + Staff area,Distinctive for this site type,21,Similar mix to the fleet (61% drinks): a combo machine suits
+BOSS COFFEE CARAMEL,4.7,Drink,3,0.487,1.32,6.21,1.97,3,Medium,Office & corporate + Staff area,Distinctive for this site type,21,Similar mix to the fleet (61% drinks): a combo machine suits
+UP & GO STRAWBERRY 500ML,5.14,Drink,6,0.374,0.81,4.17,1.52,4,Medium,Office & corporate + Staff area,Distinctive for this site type,21,Similar mix to the fleet (61% drinks): a combo machine suits
+UP & GO CHOCOLATE 500ML,5.6,Drink,17,0.639,0.94,5.27,1.48,8,High,Office & corporate + Staff area,Distinctive for this site type,21,Similar mix to the fleet (61% drinks): a combo machine suits
+COKE ZERO 375ML,3.17,Drink,8,0.811,2.0,6.35,1.47,3,Medium,Office & corporate + Staff area,Distinctive for this site type,21,Similar mix to the fleet (61% drinks): a combo machine suits
+DAIRY MILK BAR 68G,3.53,Drink,30,0.259,1.27,4.5,1.45,11,High,Office & corporate + Staff area,Distinctive for this site type,21,Similar mix to the fleet (61% drinks): a combo machine suits
+PIRANHA SOY CRISPS ORIGINAL 100G,4.1,Snack/food,16,0.162,0.7,2.85,1.45,5,High,Office & corporate + Staff area,Distinctive for this site type,21,Similar mix to the fleet (61% drinks): a combo machine suits
+BOSS COFFEE MOCHA,4.27,Drink,7,0.551,1.31,5.59,1.42,4,Medium,Office & corporate + Staff area,Distinctive for this site type,21,Similar mix to the fleet (61% drinks): a combo machine suits
+COOL RIDGE WATER 600ML,4.94,Drink,5,0.606,6.16,30.43,1.0,0,Low,Culture & events,Expected best-sellers,0,Similar mix to the fleet (63% drinks): a combo machine suits
+Mount Franklin Water,4.2,Drink,6,0.761,4.5,18.91,1.0,0,Low,Culture & events,Expected best-sellers,0,Similar mix to the fleet (63% drinks): a combo machine suits
+MOUNT EVEREST WATER,3.78,Drink,39,0.663,3.99,15.08,1.0,0,Low,Culture & events,Expected best-sellers,0,Similar mix to the fleet (63% drinks): a combo machine suits
+COKE LIFE 375ML,3.14,Drink,30,0.844,2.76,8.68,1.0,0,Low,Culture & events,Expected best-sellers,0,Similar mix to the fleet (63% drinks): a combo machine suits
+COKE NO SUGAR 375ML,3.01,Drink,40,0.717,2.16,6.49,1.0,0,Low,Culture & events,Expected best-sellers,0,Similar mix to the fleet (63% drinks): a combo machine suits
+LIVING WATER 500ML,4.2,Drink,11,0.561,1.96,8.25,1.0,0,Low,Culture & events,Expected best-sellers,0,Similar mix to the fleet (63% drinks): a combo machine suits
+COKE ZERO 600ML,5.95,Drink,16,0.466,1.94,11.55,1.0,0,Low,Culture & events,Expected best-sellers,0,Similar mix to the fleet (63% drinks): a combo machine suits
+COCA COLA 375ML,3.1,Drink,20,0.733,1.81,5.6,1.0,0,Low,Culture & events,Expected best-sellers,0,Similar mix to the fleet (63% drinks): a combo machine suits
+COCA COLA 600ML,6.46,Drink,13,0.678,1.69,10.91,1.0,0,Low,Culture & events,Expected best-sellers,0,Similar mix to the fleet (63% drinks): a combo machine suits
+RED BULL REGULAR 250ML,4.64,Drink,40,0.392,1.63,7.54,1.0,0,Low,Culture & events,Expected best-sellers,0,Similar mix to the fleet (63% drinks): a combo machine suits

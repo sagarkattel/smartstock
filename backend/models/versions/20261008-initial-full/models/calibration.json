@@ -1,0 +1,83 @@
+{
+  "app1": {
+    "method": "raw",
+    "z": {
+      "0.1": -1.2816,
+      "0.8": 0.8416,
+      "0.9": 1.2816,
+      "0.95": 1.6449
+    },
+    "heldout_mean_abs_coverage_error": {
+      "raw": 0.025801282051282043,
+      "conformal": 0.06550480769230768
+    },
+    "levels": [
+      0.1,
+      0.8,
+      0.9,
+      0.95
+    ],
+    "min_confidence": 0.9,
+    "priority_service_levels": {
+      "High": 0.95,
+      "Medium": 0.9,
+      "Low": 0.8
+    },
+    "sigma_floor": 0.5,
+    "calibration_rows": 2496
+  },
+  "app2a": {
+    "method": "raw",
+    "z": {
+      "0.1": -1.2816,
+      "0.8": 0.8416,
+      "0.9": 1.2816,
+      "0.95": 1.6449
+    },
+    "heldout_mean_abs_coverage_error": {
+      "raw": 0.027596618357487918,
+      "conformal": 0.03623188405797104
+    },
+    "levels": [
+      0.1,
+      0.8,
+      0.9,
+      0.95
+    ],
+    "min_confidence": 0.9,
+    "priority_service_levels": {
+      "High": 0.95,
+      "Medium": 0.9,
+      "Low": 0.8
+    },
+    "sigma_floor": 0.5,
+    "calibration_rows": 1612
+  },
+  "app2b": {
+    "method": "conformal",
+    "z": {
+      "0.1": -0.44999999999999973,
+      "0.8": 0.03000000000000025,
+      "0.9": 0.7400000000000002,
+      "0.95": 1.38
+    },
+    "heldout_mean_abs_coverage_error": {
+      "raw": 0.06235017123287667,
+      "conformal": 0.011408390410958896
+    },
+    "levels": [
+      0.1,
+      0.8,
+      0.9,
+      0.95
+    ],
+    "min_confidence": 0.9,
+    "priority_service_levels": {
+      "High": 0.95,
+      "Medium": 0.9,
+      "Low": 0.8
+    },
+    "sigma_floor": 0.5,
+    "calibration_rows": 23272
+  }
+}
